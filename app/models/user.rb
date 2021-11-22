@@ -7,4 +7,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates_length_of :phone_number, minimum: 9
+  validates :first_name, presence: true
+  validates :last_name, presence: true
 end
