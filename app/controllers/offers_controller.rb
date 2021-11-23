@@ -1,6 +1,6 @@
 class OffersController < ApplicationController
   def index
-    @offers = Offer.where(brand: params[:brand])
+    @offers = Offer.all
   end
 
   def show
@@ -24,6 +24,6 @@ class OffersController < ApplicationController
   private
 
   def offer_params
-    params.require(:offer).permit(:quantity, :type, :transportability, :timeslot, :comment)
+    params.require(:offer).permit(:plastic_bottles, :glass_bottles, :crates, :timeslot, :comment)
   end
 end
