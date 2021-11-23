@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_22_164524) do
+
+ActiveRecord::Schema.define(version: 2021_11_23_113624) do
+
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,14 +29,16 @@ ActiveRecord::Schema.define(version: 2021_11_22_164524) do
   end
 
   create_table "offers", force: :cascade do |t|
-    t.integer "quantity"
-    t.string "type"
     t.string "transportability"
     t.time "timeslot"
     t.text "comment"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "plastic_bottles"
+    t.string "glass_bottles"
+    t.string "crates"
+    t.integer "tip"
     t.index ["user_id"], name: "index_offers_on_user_id"
   end
 
