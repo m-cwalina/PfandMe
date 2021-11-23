@@ -1,0 +1,5 @@
+<% if @user.donor? %>
+  <%= @user.bookings%>
+<% else %>
+  <%= @user.offers %>
+<% end %>
