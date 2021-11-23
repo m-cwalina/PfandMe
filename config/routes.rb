@@ -6,5 +6,5 @@ Rails.application.routes.draw do
     resources :bookings
   end
 
-  get '/dashboard', to: 'dashboard#show', as: :dashboard
+  get '/dashboard', to: 'pages#dashboard', as: :dashboard
 end
