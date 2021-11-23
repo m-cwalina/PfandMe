@@ -1,0 +1,26 @@
+<% if current_user.donor %>
+  <% if @last_offer.present?  %>
+  <%= @last_offer.timeslot %>
+    <% if @last_offer.bookings.any? %>
+      <% @last_offer.bookings.each do |booking| %>
+        <%= booking.user.story %>
+        <%= booking.user.first_name %>
+      <% end %>
+    <% else %>
+      <h2>You have no bookings yet</h2>
+    <% end %>
+  <% end %>
+
+<% else %>
+
+  <% if current_user.bookings.any? %>
+    <% current_user.bookings.each do |booking| %>
+      <% if booking.status == 0 %>
+          <p>Waiting for <%= booking.offer.user.first_name %> to confirm your order</p>
+        <% else %>
+          <p><%= booking.offer.user.first_name %> was accepted your pickup</p>
+      <% end %>
+    <% end %>
+  <% end %>
+
+<% end %>
