@@ -15,7 +15,7 @@ class OffersController < ApplicationController
     @offer = Offer.new(offer_params)
     @offer.user = current_user
     if @offer.save
-      redirect_to offers_path, notice: 'Offer was successfully created.'
+      redirect_to offer_path(@offer), notice: 'Offer was successfully created.'
     else
       render :new
     end
