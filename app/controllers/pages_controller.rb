@@ -5,4 +5,7 @@ class PagesController < ApplicationController
     @user = current_user
     @last_offer = @user.offers.last
   end
+
+  def home
+  end
 end
