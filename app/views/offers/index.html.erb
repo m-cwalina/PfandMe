@@ -1,1 +1,21 @@
-<p>Hey I'm the index</p>
+
+<div class="container">
+
+<h3>Active Offers</h3>
+<% @offers.each do |offer| %>
+  <div>
+    <%= offer.user.first_name %>
+    <%= offer.user.address %>
+    <%= offer.user.photo_url %>
+  </div>
+  <div>
+  <%= offer.timeslot %>
+  <%= offer.plastic_bottles %>
+  <%= offer.glass_bottles %>
+  <%= offer.crates %>
+  <%= offer.tip %>
+  <%= offer.transportability %>
+  <%= offer.comment %>
+  </div>
+<% end %>
+</div>
