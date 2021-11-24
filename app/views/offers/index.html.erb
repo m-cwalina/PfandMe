@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container mt-5">
 <h3>Here are all active offers</h3>
   <% @offers.each do |offer| %>
@@ -17,4 +18,26 @@
 
   <button type="button" class="btn btn-success"> <%= link_to "Create a new offer", offer_path(:new) %></button>
 
+=======
+<div class="container">
+
+<h3>Active Offers</h3>
+<% @offers.each do |offer| %>
+  <div>
+    <%= offer.user.first_name %>
+    <%= offer.user.address %>
+    <%= offer.user.photo_url %>
+  </div>
+  <div>
+  <%= offer.timeslot %>
+  <%= offer.plastic_bottles %>
+  <%= offer.glass_bottles %>
+  <%= offer.crates %>
+  <%= offer.tip %>
+  <%= offer.transportability %>
+  <%= offer.comment %>
+  </div>
+<% end %>
+  <p class="btn btn-primary"></p>
+>>>>>>> master
 </div>
