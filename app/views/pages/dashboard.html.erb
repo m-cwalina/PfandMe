@@ -1,12 +1,10 @@
-<% unless current_user.donor %>
-  <% if current_user.bookings.any? %>
-    <% current_user.bookings.each do |booking| %>
-      <% if booking.status == 0 %>
-        <p>This order is still available to pickup from <%= booking.offer.user.first_name %></p>
-      <% else %>
-        <p><%= booking.offer.user.first_name %></p>
-        <p><%= booking.offer.user.address %></p>
-      <% end %>
+<% if current_user.bookings.any? %>
+  <% current_user.bookings.each do |booking| %>
+    <% if booking.status == 0 %>
+      <p>This order is still available to pickup from <%= booking.offer.user.first_name %></p>
+    <% else %>
+      <p><%= booking.offer.user.first_name %></p>
+      <p><%= booking.offer.user.address %></p>
     <% end %>
   <% end %>
 <% end %>
