@@ -1,7 +1,6 @@
 class BookingsController < ApplicationController
   def index
-    raise
-    Offer.where(bookings = [])
+    @bookings = Booking.all
   end
 
   def show
