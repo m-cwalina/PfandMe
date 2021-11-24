@@ -56,7 +56,7 @@ user4 = User.create!(
   photo_url: "https://images.unsplash.com/photo-1624561272659-224ea122b2e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
   )
 
-  # donor
+# donor
 user5 = User.create!(
   first_name: "Brittany",
   last_name: Faker::Name.last_name,
@@ -68,7 +68,7 @@ user5 = User.create!(
   photo_url: "https://media.istockphoto.com/photos/blowing-kisses-picture-id510403008?k=20&m=510403008&s=612x612&w=0&h=bGF8hCVg4sDzbzogQ07fPo_V3vKFxP7A4BiKlHpMpEM="
   )
 
-  # donor
+# donor
 user6 = User.create!(
   first_name: "Sabine",
   last_name: Faker::Name.last_name,
