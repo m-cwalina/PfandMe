@@ -1,11 +1,12 @@
 <div class="container mt-5">
 
 <% if @offer.user == current_user %>
-  <h3>Here's the details of your offer! </h3>
+  <h3>This is <strong>your</strong> offer listing! Here are the details:</h3>
 <% else %>
-    <h3>Here's the details of <%= @offer.user.first_name %>'s offer! </h3>
+    <h3>This is <strong><%= @offer.user.first_name %></strong>'s offer listing! Here are the details: </h3>
 <% end %>
-<p> <strong> You can see the offer details below: </strong> </p>
+<br>
+<%# <p> <strong> You can see the offer details below: </strong> </p> %>
   <div>
 
     <p> <strong> Pickup address: </strong> <%= @offer.user.address %> </p>
