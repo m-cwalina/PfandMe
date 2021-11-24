@@ -1,1 +1,11 @@
 <p>Hey I'm the index</p>
+<% @offers.each do |offer| %>
+<%= offer.user.first_name %>
+<%= offer.timeslot %>
+<%= offer.plastic_bottles %>
+<%= offer.glass_bottles %>
+<%= offer.crates %>
+<%= offer.tip %>
+<%= offer.comment %>
+<% end %>
+<p class="btn btn-primary"></p>
