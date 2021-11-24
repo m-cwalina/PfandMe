@@ -8,7 +8,7 @@
           <p> <strong> Donor name: </strong> <%= offer.user.first_name %> </p>
           <p> <strong> Pickup address: </strong> <%= offer.user.address %> </p>
           <p> <strong> Pickup time:  </strong> <%= offer.timeslot %></p>
-          <p>  <%= link_to "View details", offer_path(offer) %> </p>
+          <button type="button" class="btn btn-success"><%= link_to "View details", offer_path(offer) %> </button>
           <br>
         </li>
     </div>
