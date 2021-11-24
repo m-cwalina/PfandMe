@@ -104,12 +104,22 @@ user8 = User.create!(
   photo_url: "https://images.unsplash.com/photo-1543965170-d57f3f5ecf20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1416&q=80"
 )
 
-
 offer1 = Offer.create!(
   transportability: "Heavy",
   timeslot: "12:00-13:00",
   comment: "Its heavy",
-  user_id: user1.id,
+  user_id: user2.id,
+  plastic_bottles: 10,
+  glass_bottles: 10,
+  crates: 1,
+  tip: 5
+)
+
+offer2 = Offer.create!(
+  transportability: "Heavy",
+  timeslot: '12.00 - 13.00',
+  comment: "Its heavy",
+  user_id: user2.id,
   plastic_bottles: 10,
   glass_bottles: 10,
   crates: 1,
@@ -124,6 +134,6 @@ booking1 = Booking.create!(
 
 booking2 = Booking.create!(
   user_id: user2.id,
-  offer_id: offer1.id,
-  status: 1
+  offer_id: offer2.id,
+  status: :completed
 )
