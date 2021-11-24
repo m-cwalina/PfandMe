@@ -1,0 +1,16 @@
+<div>
+<% if current_user.bookings.any? %>
+  <% current_user.bookings.each do |booking| %>
+    <% if booking.status == "pending" %>
+      <h1>Pending Bookings</h1>
+      <p>You have not accepted any offers!</p>
+    <% else %>
+      <h1>Your Bookings</h1>
+      <p><%= booking.offer.user.first_name %></p>
+      <p><%= booking.offer.user.last_name %></p>
+      <p><%= booking.offer.user.address %></p>
+      <p><%= booking.offer.timeslot %></p>
+    <% end %>
+  <% end %>
+<% end %>
+</div>
