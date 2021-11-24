@@ -30,7 +30,7 @@ user2 = User.create!(
   phone_number: "030 50 33435",
   donor: false,
   photo_url: "https://images.unsplash.com/photo-1629467057571-42d22d8f0cbd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=698&q=80",
-  story: "After a period of street homelessness, Chris is rebuilding his life in different ways, including using his new-found confidence to volunteer"
+  story: "After a period of street homelessness, Karl is rebuilding his life in different ways, including using his new-found confidence to volunteer"
 )
 # donor
 user3 = User.create!(
@@ -120,4 +120,10 @@ booking1 = Booking.create!(
   user_id: user2.id,
   offer_id: offer1.id,
   status: 0
+)
+
+booking2 = Booking.create!(
+  user_id: user2.id,
+  offer_id: offer1.id,
+  status: 1
 )
