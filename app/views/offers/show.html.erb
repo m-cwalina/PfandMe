@@ -1,0 +1,24 @@
+<div class="container mt-5">
+
+<% if @offer.user == current_user %>
+  <h3>Here's the details of your offer! </h3>
+<% else %>
+    <h3>Here's the details of <%= @offer.user.first_name %>'s offer! </h3>
+<% end %>
+<p> <strong> You can see the offer details below: </strong> </p>
+  <div>
+
+    <p> <strong> Pickup address: </strong> <%= @offer.user.address %> </p>
+  </div>
+  <div>
+      <p> <strong> Plastic bottles: </strong> <%= @offer.plastic_bottles %> </p>
+      <p> <strong> Glass bottles: </strong> <%= @offer.glass_bottles %> </p>
+      <p> <strong> Bottle crates: </strong> <%= @offer.crates %> </p>
+      <p> <strong> Tip: </strong> <%= @offer.tip %> </p>
+      <p> <strong> Comment: </strong> <%= @offer.comment %> </p>
+  </div>
+
+  <button type="button" class="btn btn-success"><%= link_to "Update this offer", edit_offer_path(@offer) %></button>
+  <button type="button" class="btn btn-success"><%= link_to "Delete this offer", offer_path(@offer), method: :delete %></button>
+  <button type="button" class="btn btn-success"><%= link_to "Back to all offers", offers_path %></button>
+</div>
