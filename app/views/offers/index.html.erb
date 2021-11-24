@@ -1,5 +1,7 @@
 
 <div class="container mt-5">
+<button type="button" class="btn btn-success mb-4"> <%= link_to "Create a new offer", offer_path(:new) %></button>
+
 <h3>Here are all active offers</h3>
   <% @offers.each do |offer| %>
     <div>
@@ -14,5 +16,3 @@
     </div>
   </ul>
 <% end %>
-
-<button type="button" class="btn btn-success"> <%= link_to "Create a new offer", offer_path(:new) %></button>
