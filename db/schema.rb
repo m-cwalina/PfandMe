@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_23_142119) do
+ActiveRecord::Schema.define(version: 2021_11_24_162013) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2021_11_23_142119) do
 
   create_table "offers", force: :cascade do |t|
     t.string "transportability"
-    t.time "timeslot"
+    t.string "timeslot"
     t.text "comment"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false

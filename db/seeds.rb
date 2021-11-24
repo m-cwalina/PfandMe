@@ -117,7 +117,7 @@ offer1 = Offer.create!(
 
 offer2 = Offer.create!(
   transportability: "Heavy",
-  timeslot: "12:00-13:00",
+  timeslot: '12.00 - 13.00',
   comment: "Its heavy",
   user_id: user2.id,
   plastic_bottles: 10,
