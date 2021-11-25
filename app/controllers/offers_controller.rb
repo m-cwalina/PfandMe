@@ -1,7 +1,8 @@
 class OffersController < ApplicationController
   def index
-    # @offers = Offer.all
-    @offers = Offer.where(bookings = [])
+    @offers = Offer.all
+    # @offers = Offer.where(bookings = [])
+
   end
 
   def show
@@ -20,6 +21,22 @@ class OffersController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+    @offer = Offer.find(params[:id])
+  end
+
+  def update
+    @offer = Offer.find(params[:id])
+    @offer.update(offer_params)
+    redirect_to offer_path(@offer)
+  end
+
+  def destroy
+    @offer = Offer.find(params[:id])
+    @offer.destroy
+    redirect_to offers_path
   end
 
   private
