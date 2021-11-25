@@ -108,7 +108,7 @@ offer1 = Offer.create!(
   transportability: "Heavy",
   timeslot: "12:00-13:00",
   comment: "Its heavy",
-  user_id: user2.id,
+  user_id: user7.id,
   plastic_bottles: 10,
   glass_bottles: 10,
   crates: 1,
@@ -117,11 +117,11 @@ offer1 = Offer.create!(
 
 offer2 = Offer.create!(
   transportability: "Heavy",
-  timeslot: '12.00 - 13.00',
+  timeslot: '09.00 - 10.00',
   comment: "Its heavy",
-  user_id: user2.id,
-  plastic_bottles: 10,
-  glass_bottles: 10,
+  user_id: user8.id,
+  plastic_bottles: 5,
+  glass_bottles: 30,
   crates: 1,
   tip: 5
 )
@@ -129,7 +129,7 @@ offer2 = Offer.create!(
 booking1 = Booking.create!(
   user_id: user2.id,
   offer_id: offer1.id,
-  status: 0
+  status: :in_progress
 )
 
 booking2 = Booking.create!(
