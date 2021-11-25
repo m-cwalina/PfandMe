@@ -10,5 +10,5 @@ class Offer < ApplicationRecord
 
   CRATES = ['0-2', '3-5']
 
-  TIP = [1, 2, 5, 10, 20, 50]
+  TIP = [0, 1, 2, 5, 10, 20, 50]
 end
