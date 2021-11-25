@@ -1,11 +1,12 @@
-<div container>
-  <%= simple_form_for offer do |f|  %>
-    <%= f.input :timeslot, collection: Offer::TIMESLOT, prompt: "Choose a timeslot:" %>
-    <%= f.input :plastic_bottles, collection: Offer::PLASTICBOTTLES, prompt: "Select quantity:" %>
-    <%= f.input :glass_bottles, collection: Offer::GLASSBOTTLES, prompt: "Select quantity:" %>
-    <%= f.input :crates, collection: Offer::CRATES, prompt: "Select quantity:" %>
-    <%= f.input :tip, collection: Offer::TIP, prompt: "Add a tip: €", label: 'Sponsor your Pfanders with a tip:' %>
-    <%= f.input :comment, label: 'Anything you would like to share with us? Add a comment:'%>
-    <%= f.submit class: "btn btn-primary" %>
-  <% end %>
-</div>
+<%= simple_form_for offer do |f|  %>
+    <div class="form">
+      <%= f.input :timeslot, collection: Offer::TIMESLOT, prompt: "Choose a timeslot:", input_html: { class: 'special'}, label: false %>
+      <%= f.input :plastic_bottles, collection: Offer::PLASTICBOTTLES, prompt: "Amount of plastic bottles:", input_html: { class: 'special' }, label: false  %>
+      <%= f.input :glass_bottles, collection: Offer::GLASSBOTTLES, prompt: "Amount of glass bottles:", input_html: { class: 'special' }, label: false  %>
+      <%= f.input :crates, collection: Offer::CRATES, prompt: "Amount of crates:", input_html: { class: 'special' }, label: false  %>
+      <%= f.input :tip, collection: Offer::TIP, prompt: "Add a tip: €", label: 'Sponsor your Pfanders with a tip:', input_html: { class: 'special' }, label: false  %>
+      <%= f.input :comment, label: 'Anything you would like to share with us? Add a comment:', input_html: { class: 'last' }%>
+      <%= f.button :submit, id: "button" %>
+    </div>
+<% end %>
+
