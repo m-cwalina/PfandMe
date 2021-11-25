@@ -32,7 +32,6 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'devise'
 gem "faker"
-gem 'dotenv-rails', groups: [:development, :test]
 
 
 gem 'autoprefixer-rails', '10.2.5'
@@ -66,3 +65,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
+gem 'cloudinary', '~> 1.16.0'

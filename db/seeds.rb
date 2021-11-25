@@ -10,18 +10,20 @@ User.destroy_all
 puts 'Creating 8 users...'
 
 # donor
-user1 = User.create!(
+user1 = User.new(
   first_name: "Matthias",
   last_name: Faker::Name.last_name,
   address: "Leopoldstraße 49, Berlin",
   email: "user1@pfandme.com",
   password: "123456",
   phone_number: "030 36 05762",
-  donor: true,
-  photo_url: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=689&q=80"
+  donor: true
 )
+user1.photo.attach(io: File.open('./app/assets/images/user_images/user1.jpeg'), filename: 'user1.jpeg', content_type: 'image/jpeg')
+user1.save!
+
 # Karl is the collector/Pfander
-user2 = User.create!(
+user2 = User.new(
   first_name: "Karl",
   last_name: Faker::Name.last_name,
   address: "Brandenburgische Straße 19, Berlin",
@@ -29,11 +31,13 @@ user2 = User.create!(
   password: "123456",
   phone_number: "030 50 33435",
   donor: false,
-  photo_url: "https://images.unsplash.com/photo-1629467057571-42d22d8f0cbd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=698&q=80",
-  story: "After a period of street homelessness, Karl is rebuilding his life in different ways, including using his new-found confidence to volunteer"
+  story: "Hi there! I'm Karl 😊
+  After a period of homelessness, I'm trying to rebuild my life while volunteering at a homeless shelter. Thanks for your tips and donations. It helps me and the shelter 😌"
 )
+user2.photo.attach(io: File.open('./app/assets/images/user_images/user2.jpeg'), filename: 'user2.jpeg', content_type: 'image/jpeg')
+user2.save!
 # donor
-user3 = User.create!(
+user3 = User.new(
   first_name: "Manu",
   last_name: Faker::Name.last_name,
   address: "Rudi-Dutschke-Straße 26, 10969, Berlin",
@@ -41,11 +45,12 @@ user3 = User.create!(
   password: "123456",
   phone_number: "030 18 46635",
   donor: true,
-  photo_url: "https://images.unsplash.com/photo-1630841539293-bd20634c5d72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
 )
+user3.photo.attach(io: File.open('./app/assets/images/user_images/user3.jpeg'), filename: 'user3.jpeg', content_type: 'image/jpeg')
+user3.save!
 
 # donor
-user4 = User.create!(
+user4 = User.new(
   first_name: "Toni",
   last_name: Faker::Name.last_name,
   address: "Karl-Marx-Straße 10, Berlin",
@@ -53,11 +58,12 @@ user4 = User.create!(
   email: "user4@pfandme.com",
   password: "123456",
   donor: true,
-  photo_url: "https://images.unsplash.com/photo-1624561272659-224ea122b2e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
 )
+user4.photo.attach(io: File.open('./app/assets/images/user_images/user4.jpeg'), filename: 'user4.jpeg', content_type: 'image/jpeg')
+user4.save!
 
 # donor
-user5 = User.create!(
+user5 = User.new(
   first_name: "Brittany",
   last_name: Faker::Name.last_name,
   address: "Frankfurter Allee 8, Berlin",
@@ -65,11 +71,12 @@ user5 = User.create!(
   email: "user5@pfandme.com",
   password: "123456",
   donor: true,
-  photo_url: "https://media.istockphoto.com/photos/blowing-kisses-picture-id510403008?k=20&m=510403008&s=612x612&w=0&h=bGF8hCVg4sDzbzogQ07fPo_V3vKFxP7A4BiKlHpMpEM="
 )
+user5.photo.attach(io: File.open('./app/assets/images/user_images/user5.jpeg'), filename: 'user5.jpeg', content_type: 'image/jpeg')
+user5.save!
 
 # donor
-user6 = User.create!(
+user6 = User.new(
   first_name: "Sabine",
   last_name: Faker::Name.last_name,
   address: "Waßmannsdorfer Chaussee 14, Berlin",
@@ -77,11 +84,12 @@ user6 = User.create!(
   email: "user6@pfandme.com",
   password: "123456",
   donor: true,
-  photo_url: "https://images.unsplash.com/photo-1602243688664-6afd37981acd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
 )
+user6.photo.attach(io: File.open('./app/assets/images/user_images/user6.jpeg'), filename: 'user6.jpeg', content_type: 'image/jpeg')
+user6.save!
 
   # donor
-user7 = User.create!(
+user7 = User.new(
   first_name: "Daniel",
   last_name: Faker::Name.last_name,
   address: "Genslerstraße 86, Berlin",
@@ -89,11 +97,14 @@ user7 = User.create!(
   email: "user7@pfandme.com",
   password: "123456",
   donor: true,
-  photo_url: "https://images.unsplash.com/photo-1519689373023-dd07c7988603?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
   )
 
+user7.photo.attach(io: File.open('./app/assets/images/user_images/user7.jpeg'), filename: 'user7.jpeg', content_type: 'image/jpeg')
+user7.save!
+
+
   # donor
-user8 = User.create!(
+user8 = User.new(
   first_name: "Stefan",
   last_name: Faker::Name.last_name,
   address: "Hermannstraße 86, Berlin",
@@ -101,29 +112,78 @@ user8 = User.create!(
   email: "user8@pfandme.com",
   password: "123456",
   donor: true,
-  photo_url: "https://images.unsplash.com/photo-1543965170-d57f3f5ecf20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1416&q=80"
 )
+user8.photo.attach(io: File.open('./app/assets/images/user_images/user8.jpeg'), filename: 'user8.jpeg', content_type: 'image/jpeg')
+user8.save!
 
 offer1 = Offer.create!(
-  transportability: "Heavy",
   timeslot: "12:00-13:00",
-  comment: "Its heavy",
-  user_id: user2.id,
+  comment: "Please 📱 me when you get here",
+  user_id: user1.id,
   plastic_bottles: 10,
-  glass_bottles: 10,
+  glass_bottles: 20,
   crates: 1,
-  tip: 5
+  tip: 10
 )
 
 offer2 = Offer.create!(
-  transportability: "Heavy",
-  timeslot: '12.00 - 13.00',
-  comment: "Its heavy",
-  user_id: user2.id,
+  timeslot: '15.00 - 16.00',
+  comment: "You'd have to climb 4 floors :)",
+  user_id: user3.id,
   plastic_bottles: 10,
   glass_bottles: 10,
-  crates: 1,
+  crates: 0,
   tip: 5
+)
+
+offer3 = Offer.create!(
+  timeslot: '9.00 - 10.00',
+  comment: "It's pretty heavy! 😬",
+  user_id: user4.id,
+  plastic_bottles: 100,
+  glass_bottles: 70,
+  crates: 1,
+  tip: 15
+)
+
+offer4 = Offer.create!(
+  timeslot: '12.00 - 13.00',
+  comment: "You should bring one or two big 🛍️ to carry all the bottles.",
+  user_id: user5.id,
+  plastic_bottles: 50,
+  glass_bottles: 10,
+  crates: 0,
+  tip: 15
+)
+
+offer5 = Offer.create!(
+  timeslot: '14.00 - 15.00',
+  comment: "We had a huge bachelorette party last night 🥳 There are a whole bunch of bottles waiting to be picked up. See you soon!",
+  user_id: user6.id,
+  plastic_bottles: 100,
+  glass_bottles: 10,
+  crates: 3,
+  tip: 5
+)
+
+offer6 = Offer.create!(
+  timeslot: '13.00 - 14.00',
+  comment: "Please bring a few large bags with you to carry the bottles more easily.",
+  user_id: user7.id,
+  plastic_bottles: 50,
+  glass_bottles: 20,
+  crates: 0,
+  tip: 5
+)
+
+offer7 = Offer.create!(
+  timeslot: '10.00 - 11.00',
+  comment: "It might be a bit heavy. Please bring your own bags or a 🛒. Bis bald!",
+  user_id: user8.id,
+  plastic_bottles: 50,
+  glass_bottles: 20,
+  crates: 0,
+  tip: 10
 )
 
 booking1 = Booking.create!(
