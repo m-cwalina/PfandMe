@@ -1,15 +1,13 @@
 $white: rgba(255,255,255,0.3);
 
-body{
+#body-form {
   background: linear-gradient(45deg, #df2a4e, #3F5EFB);
-  height: 100vh;
   font-family: 'Montserrat', sans-serif;
 }
 
 form {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
   background: $white;
   padding: 3em;
   height: 707px;
@@ -49,7 +47,6 @@ form {
 
     #button {
       margin-top: 10px;
-      margin-bottom: 60px;
       width: 150px;
       font-size: 1rem;
       border-radius: 20px;
