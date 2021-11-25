@@ -4,7 +4,7 @@
     <%= f.input :plastic_bottles, collection: Offer::PLASTICBOTTLES, prompt: "Select quantity:" %>
     <%= f.input :glass_bottles, collection: Offer::GLASSBOTTLES, prompt: "Select quantity:" %>
     <%= f.input :crates, collection: Offer::CRATES, prompt: "Select quantity:" %>
-    <%= f.input :tip, collection: Offer::TIP, prompt: "Add a tip:", label: 'Sponsor your Pfanders with a tip:' %>
+    <%= f.input :tip, collection: Offer::TIP, prompt: "Add a tip: €", label: 'Sponsor your Pfanders with a tip:' %>
     <%= f.input :comment, label: 'Anything you would like to share with us? Add a comment:'%>
     <%= f.submit class: "btn btn-primary" %>
   <% end %>

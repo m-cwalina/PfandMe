@@ -30,18 +30,18 @@ class OffersController < ApplicationController
   def update
     @offer = Offer.find(params[:id])
     @offer.update(offer_params)
-    redirect_to offer_path(@offer)
+    redirect_to offer_path(@offer), notice: 'Offer was successfully updated.'
   end
 
   def destroy
     @offer = Offer.find(params[:id])
     @offer.destroy
-    redirect_to offers_path
+    redirect_to offers_path, notice: 'Offer was successfully deleted.'
   end
 
   private
 
   def offer_params
-    params.require(:offer).permit(:plastic_bottles, :glass_bottles, :crates, :timeslot, :comment)
+    params.require(:offer).permit(:plastic_bottles, :glass_bottles, :crates, :timeslot, :comment, :tip)
   end
 end
