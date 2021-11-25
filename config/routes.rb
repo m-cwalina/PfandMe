@@ -7,7 +7,6 @@ Rails.application.routes.draw do
 
   get '/pfander_dashboard', to: 'pages#pfander_dashboard', as: :pfander_dashboard
   get '/donor_dashboard', to: 'pages#donor_dashboard', as: :donor_dashboard
-  
-  resources :bookings, only: [:index, :show, :edit, :update]
 
+  resources :bookings, only: [:index, :show, :edit, :update]
 end
