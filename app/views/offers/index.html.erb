@@ -14,7 +14,8 @@
           <p> <strong> Pickup time:  </strong> <%= offer.glass_bottles %></p>
           <p> <strong> Pickup time:  </strong> <%= offer.crates %></p>
           <p> <strong> Pickup time:  </strong> <%= offer.tip %></p>
-          <%= link_to "Accept", offer_bookings_path(@offer), method: :create, id: "create-link", class: "btn btn-primary", data: { controller: :sweetalert, action: "sweetalert#fire", sweetalert_pending_value: true} %>
+          <%=
+          link_to "Accept", offer_bookings_path(offer), method: :post, class: "btn btn-primary", data: { controller: :sweetalert, action: "sweetalert#fire", sweetalert_pending_value: true} %>
           <br>
         </li>
     </div>
