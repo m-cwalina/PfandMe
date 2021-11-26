@@ -24,4 +24,21 @@ export default class extends Controller {
       })
     }
   }
+  fire2(e) {
+    if (this.pendingValue) {
+      e.preventDefault()
+      e.stopImmediatePropagation()
+      Swal.fire({
+        title: 'Do you want to mark this offer as completed?',
+        showCancelButton: true,
+        confirmButtonText: 'Complete',
+      }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+          this.pendingValue = false
+          this.element.click()
+        }
+      })
+    }
+  }
 }
