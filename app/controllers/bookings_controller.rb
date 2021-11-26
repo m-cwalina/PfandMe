@@ -17,13 +17,19 @@ class BookingsController < ApplicationController
     @offer = Offer.find(params[:offer_id])
     @booking.offer = @offer
     @booking.user = current_user
-    @booking.status = "in_progress"
+    @booking.status = "accepted"
     if @booking.save
-      @booking.status = "accepted"
       redirect_to pfander_dashboard_path, notice: 'Booking was successfully created.'
     else
       redirect_to offers_path
     end
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.status = "completed"
+    @booking.save
+    redirect_to pfander_dashboard_path
   end
 
   private

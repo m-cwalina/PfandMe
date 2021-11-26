@@ -9,6 +9,8 @@
         <p><%= booking.offer.user.last_name %></p>
         <p><%= booking.offer.user.address %></p>
         <p><%= booking.offer.timeslot %></p>
+        <%=
+          link_to "Complete", booking_path(booking), method: :patch, class: "btn btn-primary", data: { controller: :sweetalert, action: "sweetalert#fire2", sweetalert_pending_value: true} %>
       <% end %>
     <% end %>
   <% end %>

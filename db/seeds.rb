@@ -117,10 +117,8 @@ user8.save!
 
 offer1 = Offer.create!(
   timeslot: "12:00-13:00",
-
   comment: "Please 📱 me when you get here",
   user_id: user1.id,
-
   plastic_bottles: 10,
   glass_bottles: 20,
   crates: 1,
@@ -143,6 +141,7 @@ offer3 = Offer.create!(
   user_id: user4.id,
   plastic_bottles: 100,
   glass_bottles: 70,
+
 
   crates: 1,
   tip: 15

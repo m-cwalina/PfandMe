@@ -1,8 +1,14 @@
 <div class="body-homepage">
   <h1>PfandMe</h1>
-  <h5>Get those pesky bottles out of your flat or office!</h5>
-  <form action="" class="form-page">
-    <input type="search" id="searchfield" required >
-    <i class="fa fa-search"></i>
-  </form>
+  <% if current_user && current_user.donor %>
+    <h5>Get those pesky bottles out of your flat or office!</h5>
+    <div class="flex-dark">
+      <a class="bttn-dark" <%= link_to "Create Offer", new_offer_path %>></a>
+  </div>
+  <% else %>
+    <form action="" class="form-page">
+      <input type="search" id="searchfield" placeholder='Enter address' required>
+      <i class="fa fa-search"></i>
+    </form>
+  <% end %>
 </div>
