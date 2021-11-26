@@ -141,8 +141,6 @@ offer3 = Offer.create!(
   user_id: user4.id,
   plastic_bottles: 100,
   glass_bottles: 70,
-
-
   crates: 1,
   tip: 15
 )
