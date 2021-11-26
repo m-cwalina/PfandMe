@@ -13,15 +13,22 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(booking_params)
+    @booking = Booking.new
     @offer = Offer.find(params[:offer_id])
     @booking.offer = @offer
     @booking.user = current_user
+    @booking.status = "accepted"
     if @booking.save
-      redirect_to booking_path(@booking), notice: 'Booking was successfully created.'
+      redirect_to pfander_dashboard_path, notice: 'Booking was successfully created.'
     else
       redirect_to offers_path
     end
+  end
+
+  def complete
+    @booking = Booking.find(params[:id])
+    @booking.status = "completed"
+    @booking.save
   end
 
   private
@@ -30,4 +37,3 @@ class BookingsController < ApplicationController
     params.require(:booking).permit(:status, :user_id, :offer_id)
   end
 end
-
