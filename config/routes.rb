@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   resources :offers do
-    resources :bookings, only: [:new, :create]
+    resources :bookings, only: [:new, :create, :edit, :update, :delete]
   end
 
   get '/pfander_dashboard', to: 'pages#pfander_dashboard', as: :pfander_dashboard

@@ -1,0 +1,40 @@
+
+# button Accept - to accept an offer
+# add an event listener (stimulus)
+# if "click" on accept > creates a booking
+# and redirect to pfander_dashboard
+# otherwise goes back to the map
+
+<div class="container mt-5">
+
+<% if @last_offer.user == current_user %>
+  <h3>This is <strong>your</strong> offer listing! Here are the details:</h3>
+<% else %>
+    <h3>This is <strong><%= @last_offer.user.first_name %></strong>'s offer listing! Here are the details: </h3>
+<% end %>
+<br>
+<%# <p> <strong> You can see the offer details below: </strong> </p> %>
+  <div>
+    <% if @last_offer.user.photo.attached? %>
+      <%= cl_image_tag @last_offer.user.photo.key, height: 80, width: 80, crop: :fill %>
+    <% else %>
+      <p>No image found</p>
+    <% end %>
+  <div>
+
+    <p> <strong> Pickup address: </strong> <%= @last_offer.user.address %> </p>
+    <p> <strong> Phone number: </strong> <%= @last_offer.user.phone_number %> </p>
+    <p> <strong> Pickup time:  </strong><%= @last_offer.timeslot %></p>
+
+  </div>
+      <p> <strong> Plastic bottles: </strong> <%= @last_offer.plastic_bottles %> </p>
+      <p> <strong> Glass bottles: </strong> <%= @last_offer.glass_bottles %> </p>
+      <p> <strong> Bottle crates: </strong> <%= @offer.crates %> </p>
+      <p> <strong> Tip: </strong> €<%= @last_offer.tip %> </p>
+      <p> <strong> Comment: </strong> <%= @last_offer.comment %> </p>
+  </div>
+
+  <button type="button" class="btn btn-success"><%= link_to "Update this offer", edit_offer_path(@last_offer) %></button>
+  <button type="button" class="btn btn-success"><%= link_to "Delete this offer", offer_path(@last_offer), method: :delete %></button>
+  <button type="button" class="btn btn-success"><%= link_to "Back to all offers", offers_path %></button>
+</div>
