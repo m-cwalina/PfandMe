@@ -4,11 +4,11 @@
   <%# <% raise %>
     <% current_user.bookings.each do |booking| %>
       <% if booking.status == "accepted" %>
-        <p>Booking status<%= booking.status %></p>
-        <p><%= booking.offer.user.first_name %></p>
-        <p><%= booking.offer.user.last_name %></p>
-        <p><%= booking.offer.user.address %></p>
-        <p><%= booking.offer.timeslot %></p>
+        <p>Booking status: <%= booking.status %></p>
+        <p>First name: <%= booking.offer.user.first_name %></p>
+        <p>Last name: <%= booking.offer.user.last_name %></p>
+        <p>Address: <%= booking.offer.user.address %></p>
+        <p>Timeslot: <%= booking.offer.timeslot %></p>
         <%=
           link_to "Complete", booking_path(booking), method: :patch, class: "btn btn-primary", data: { controller: :sweetalert, action: "sweetalert#fire2", sweetalert_pending_value: true} %>
       <% end %>
