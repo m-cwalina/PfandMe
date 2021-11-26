@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get '/donor_dashboard', to: 'pages#donor_dashboard', as: :donor_dashboard
 
-  patch '/offers/:offer_id/bookings', to: 'bookings#complete', as: :booking_complete
+  #patch '/bookings/:id', to: 'bookings#complete', as: :booking_complete
 
   resources :bookings, only: [:index, :show, :edit, :update]
 end
