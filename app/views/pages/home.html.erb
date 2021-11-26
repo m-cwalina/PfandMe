@@ -6,11 +6,14 @@
     <%= link_to new_offer_path do %>
       <div class="bttn-dark" >Create Offer</div>
       <% end %>
+  
   </div>
   <% else %>
     <form action="" class="form-page">
       <input type="search" id="searchfield" placeholder='Enter address' required>
-      <i class="fa fa-search"></i>
+      <%= link_to offers_path do %>
+        <i class="fa fa-search"></i>
+      <% end %>
     </form>
   <% end %>
 </div>

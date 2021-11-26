@@ -4,7 +4,7 @@
   <%# <% raise %>
     <% current_user.bookings.each do |booking| %>
       <% if booking.status == "accepted" %>
-        <p><%= booking.status %></p>
+        <p>Booking status<%= booking.status %></p>
         <p><%= booking.offer.user.first_name %></p>
         <p><%= booking.offer.user.last_name %></p>
         <p><%= booking.offer.user.address %></p>

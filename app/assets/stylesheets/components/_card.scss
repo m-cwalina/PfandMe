@@ -1,3 +1,12 @@
+.card {
+  margin: 30px auto;
+  border-radius: 40px;
+  box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
+  cursor: pointer;
+  transition: 0.4s;
+  padding: 15px;
+}
+
 .card-product {
   overflow: hidden;
   background: white;
@@ -37,4 +46,31 @@
 
 .img-box-card {
   width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.accept-btn {
+  width: 100%;
+  border-radius: 4px;
+  background-color: rgb(103, 40, 103);
+}
+
+// .accept-btn:hover {
+//   transform: scale(0.9, 0.9);
+//   box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25),
+//     -5px -5px 30px 15px rgba(0,0,0,0.22);
+// }
+
+.title {
+  text-align: center;
+  // background-color: rgb(245, 211, 245);
+}
+
+.background-color {
+  background-color: rgb(253, 219, 244);
 }

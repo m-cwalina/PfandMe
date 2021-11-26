@@ -19,8 +19,8 @@ user1 = User.new(
   phone_number: "030 36 05762",
   donor: true
 )
-user1.photo.attach(io: File.open('./app/assets/images/user_images/user1.jpeg'), filename: 'user1.jpeg', content_type: 'image/jpeg')
-user1.save!
+ user1.photo.attach(io: File.open('./app/assets/images/user_images/user1.jpeg'), filename: 'user1.jpeg', content_type: 'image/jpeg')
+ user1.save!
 
 # Karl is the collector/Pfander
 user2 = User.new(
@@ -34,8 +34,8 @@ user2 = User.new(
   story: "Hi there! I'm Karl 😊
   After a period of homelessness, I'm trying to rebuild my life while volunteering at a homeless shelter. Thanks for your tips and donations. It helps me and the shelter 😌"
 )
-user2.photo.attach(io: File.open('./app/assets/images/user_images/user2.jpeg'), filename: 'user2.jpeg', content_type: 'image/jpeg')
-user2.save!
+ user2.photo.attach(io: File.open('./app/assets/images/user_images/user2.jpeg'), filename: 'user2.jpeg', content_type: 'image/jpeg')
+ user2.save!
 # donor
 user3 = User.new(
   first_name: "Manu",
@@ -46,8 +46,8 @@ user3 = User.new(
   phone_number: "030 18 46635",
   donor: true,
 )
-user3.photo.attach(io: File.open('./app/assets/images/user_images/user3.jpeg'), filename: 'user3.jpeg', content_type: 'image/jpeg')
-user3.save!
+ user3.photo.attach(io: File.open('./app/assets/images/user_images/user3.jpeg'), filename: 'user3.jpeg', content_type: 'image/jpeg')
+ user3.save!
 
 # donor
 user4 = User.new(
@@ -59,8 +59,8 @@ user4 = User.new(
   password: "123456",
   donor: true,
 )
-user4.photo.attach(io: File.open('./app/assets/images/user_images/user4.jpeg'), filename: 'user4.jpeg', content_type: 'image/jpeg')
-user4.save!
+ user4.photo.attach(io: File.open('./app/assets/images/user_images/user4.jpeg'), filename: 'user4.jpeg', content_type: 'image/jpeg')
+ user4.save!
 
 # donor
 user5 = User.new(
@@ -72,8 +72,8 @@ user5 = User.new(
   password: "123456",
   donor: true,
 )
-user5.photo.attach(io: File.open('./app/assets/images/user_images/user5.jpeg'), filename: 'user5.jpeg', content_type: 'image/jpeg')
-user5.save!
+ user5.photo.attach(io: File.open('./app/assets/images/user_images/user5.jpeg'), filename: 'user5.jpeg', content_type: 'image/jpeg')
+ user5.save!
 
 # donor
 user6 = User.new(
@@ -85,8 +85,8 @@ user6 = User.new(
   password: "123456",
   donor: true,
 )
-user6.photo.attach(io: File.open('./app/assets/images/user_images/user6.jpeg'), filename: 'user6.jpeg', content_type: 'image/jpeg')
-user6.save!
+ user6.photo.attach(io: File.open('./app/assets/images/user_images/user6.jpeg'), filename: 'user6.jpeg', content_type: 'image/jpeg')
+ user6.save!
 
   # donor
 user7 = User.new(
@@ -99,9 +99,8 @@ user7 = User.new(
   donor: true,
   )
 
-user7.photo.attach(io: File.open('./app/assets/images/user_images/user7.jpeg'), filename: 'user7.jpeg', content_type: 'image/jpeg')
-user7.save!
-
+ user7.photo.attach(io: File.open('./app/assets/images/user_images/user7.jpeg'), filename: 'user7.jpeg', content_type: 'image/jpeg')
+ user7.save!
 
   # donor
 user8 = User.new(
@@ -113,13 +112,13 @@ user8 = User.new(
   password: "123456",
   donor: true,
 )
-user8.photo.attach(io: File.open('./app/assets/images/user_images/user8.jpeg'), filename: 'user8.jpeg', content_type: 'image/jpeg')
-user8.save!
+ user8.photo.attach(io: File.open('./app/assets/images/user_images/user8.jpeg'), filename: 'user8.jpeg', content_type: 'image/jpeg')
+ user8.save!
 
 offer1 = Offer.create!(
   timeslot: "12:00-13:00",
-  comment: "Its heavy",
-  user_id: user7.id,
+  comment: "Please 📱 me when you get here",
+  user_id: user1.id,
   plastic_bottles: 10,
   glass_bottles: 20,
   crates: 1,
@@ -127,12 +126,21 @@ offer1 = Offer.create!(
 )
 
 offer2 = Offer.create!(
-  transportability: "Heavy",
-  timeslot: '09.00 - 10.00',
-  comment: "Its heavy",
-  user_id: user8.id,
-  plastic_bottles: 5,
-  glass_bottles: 30,
+  timeslot: '15.00 - 16.00',
+  comment: "You'd have to climb 4 floors :)",
+  user_id: user3.id,
+  plastic_bottles: 10,
+  glass_bottles: 10,
+  crates: 0,
+  tip: 5
+)
+
+offer3 = Offer.create!(
+  timeslot: '9.00 - 10.00',
+  comment: "It's pretty heavy! 😬",
+  user_id: user4.id,
+  plastic_bottles: 100,
+  glass_bottles: 70,
   crates: 1,
   tip: 15
 )
@@ -185,6 +193,26 @@ booking1 = Booking.create!(
 
 booking2 = Booking.create!(
   user_id: user2.id,
-  offer_id: offer2.id,
+  offer_id: offer5.id,
   status: :completed
+)
+
+offer8 = Offer.create!(
+  timeslot: '10.00 - 11.00',
+  comment: "It might be a bit heavy. Please bring your own bags or a 🛒. Bis bald!",
+  user_id: user2.id,
+  plastic_bottles: 50,
+  glass_bottles: 20,
+  crates: 0,
+  tip: 10
+)
+
+offer9 = Offer.create!(
+  timeslot: '10.00 - 11.00',
+  comment: "It might be a bit heavy. Please bring your own bags or a 🛒. Bis bald!",
+  user_id: user2.id,
+  plastic_bottles: 50,
+  glass_bottles: 20,
+  crates: 0,
+  tip: 10
 )

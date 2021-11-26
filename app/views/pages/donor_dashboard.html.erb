@@ -1,4 +1,4 @@
-<% if @last_offer.present?  %>
+<% if @last_offer.present? %>
   <%= @last_offer.timeslot %>
     <% if @last_offer.bookings.any? %>
       <% @last_offer.bookings.each do |booking| %>
@@ -8,6 +8,6 @@
         <% end %>
       <% end %>
     <% else %>
-      <h2>Your booking is still pending!</h2>
+      <%= render "offers/show" %>
     <% end %>
 <% end %>
