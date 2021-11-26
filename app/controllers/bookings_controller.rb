@@ -25,10 +25,11 @@ class BookingsController < ApplicationController
     end
   end
 
-  def complete
+  def update
     @booking = Booking.find(params[:id])
     @booking.status = "completed"
     @booking.save
+    redirect_to pfander_dashboard_path
   end
 
   private
