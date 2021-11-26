@@ -102,7 +102,6 @@ user7 = User.new(
 user7.photo.attach(io: File.open('./app/assets/images/user_images/user7.jpeg'), filename: 'user7.jpeg', content_type: 'image/jpeg')
 user7.save!
 
-
   # donor
 user8 = User.new(
   first_name: "Stefan",
@@ -118,8 +117,8 @@ user8.save!
 
 offer1 = Offer.create!(
   timeslot: "12:00-13:00",
-  comment: "Its heavy",
-  user_id: user7.id,
+  comment: "Please 📱 me when you get here",
+  user_id: user1.id,
   plastic_bottles: 10,
   glass_bottles: 20,
   crates: 1,
@@ -127,12 +126,21 @@ offer1 = Offer.create!(
 )
 
 offer2 = Offer.create!(
-  transportability: "Heavy",
-  timeslot: '09.00 - 10.00',
-  comment: "Its heavy",
-  user_id: user8.id,
-  plastic_bottles: 5,
-  glass_bottles: 30,
+  timeslot: '15.00 - 16.00',
+  comment: "You'd have to climb 4 floors :)",
+  user_id: user3.id,
+  plastic_bottles: 10,
+  glass_bottles: 10,
+  crates: 0,
+  tip: 5
+)
+
+offer3 = Offer.create!(
+  timeslot: '9.00 - 10.00',
+  comment: "It's pretty heavy! 😬",
+  user_id: user4.id,
+  plastic_bottles: 100,
+  glass_bottles: 70,
   crates: 1,
   tip: 15
 )
