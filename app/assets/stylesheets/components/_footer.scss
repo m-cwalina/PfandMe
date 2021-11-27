@@ -1,29 +1,9 @@
-// * {
-// 	box-sizing: border-box;
-// 	margin: 0;
-// 	padding: 0;
-// }
-
-// $background: #1355f6;
-// body {
-// 	width: 100%;
-// 	height: 100vh;
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// 	background: $background;
-// 	overflow: hidden;
-// }
-
-// $font-family: "montserrat";
-// $container-width: 350px;
-// $border-radius: 35px;
-// $element-count: 3;
-
 #app {
 	width: 350px;
 	height: 50px;
-	display: grid;
+	display: flex;
+  justify-content: center;
+  margin: auto;
 	ul {
 		position: relative;
 		width: 350px;
@@ -39,10 +19,11 @@
 		overflow: hidden;
 		li {
 			list-style: none;
+      text-decoration: none;
 			display: grid;
 			place-items: center;
 			font-family: "montserrat";
-			color: #1355f6;
+			color: black !important;
 			z-index: 10;
 			cursor: pointer;
 		}
