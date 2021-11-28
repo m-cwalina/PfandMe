@@ -8,8 +8,6 @@ class OffersController < ApplicationController
         lat: user.latitude,
         lng: user.longitude,
         infoWindow: { content: render_to_string(partial: "/offers/map_box", locals: { user: user }) }
-        # Uncomment the above line if you want each of your markers to display a info window when clicked
-        # (you will also need to create the partial "/offers/map_box")
       }
     end
   end
