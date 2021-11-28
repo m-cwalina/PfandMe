@@ -1,7 +1,16 @@
 <div class="container background-color">
 <div class="title">
 <h3 class="pt-3">Here are all active offers</h3>
+<br>
 </div>
+<%# search bar %>
+<form action="" class="form-page">
+      <input type="search" id="searchfield" placeholder='Enter address' required data-behavior="autocomplete">
+      <%= link_to offers_path do %>
+        <i class="fa fa-search"></i>
+      <% end %>
+</form>
+
 <%# geocoding - adding array of markers %>
 <div
   id="map"
