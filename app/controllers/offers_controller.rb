@@ -2,7 +2,14 @@ class OffersController < ApplicationController
   def index
     @offers = Offer.all
     # @offers = Offer.where(bookings = [])
-
+    @users = User.where.not(latitude: nil, longitude: nil)
+    @markers = @users.geocoded.map do |user|
+      {
+        lat: user.latitude,
+        lng: user.longitude,
+        infoWindow: { content: render_to_string(partial: "/offers/map_box", locals: { user: user }) }
+      }
+    end
   end
 
   def show

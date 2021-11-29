@@ -1,9 +1,25 @@
 <div class="container background-color">
 <div class="title">
 <h3 class="pt-3">Here are all active offers</h3>
+<br>
 </div>
-<ul>
+<%# search bar %>
+<form action="" class="form-page">
+      <input type="search" id="searchfield" placeholder='Enter address' required data-behavior="autocomplete">
+      <%= link_to offers_path do %>
+        <i class="fa fa-search"></i>
+      <% end %>
+</form>
 
+<%# geocoding - adding array of markers %>
+<div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+></div>
+
+<ul>
   <% @offers.each do |offer| %>
     <div class="card">
 

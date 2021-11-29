@@ -1,4 +1,4 @@
-<% if @last_offer.present?  %>
+<% if @last_offer.present? %>
   <%= @last_offer.timeslot %>
     <% if @last_offer.bookings.any? %>
       <% @last_offer.bookings.each do |booking| %>
@@ -8,28 +8,6 @@
         <% end %>
       <% end %>
     <% else %>
-      <div class="container mt-5">
-        <br>
-        <%# <p> <strong> You can see the offer details below: </strong> </p> %>
-      <div>
-        <% if @last_offer.user.photo.attached? %>
-          <%= cl_image_tag @offer.user.photo.key, height: 80, width: 80, crop: :fill %>
-        <% else %>
-          <p>No image found</p>
-        <% end %>
-      <div>
-        <p> <strong> Pickup address: </strong> <%= @last_offer.user.address %> </p>
-        <p> <strong> Phone number: </strong> <%= @last_offer.user.phone_number %> </p>
-        <p> <strong> Pickup time:  </strong><%= @last_offer.timeslot %></p>
-      </div>
-        <p> <strong> Plastic bottles: </strong> <%= @last_offer.plastic_bottles %> </p>
-        <p> <strong> Glass bottles: </strong> <%= @last_offer.glass_bottles %> </p>
-        <p> <strong> Bottle crates: </strong> <%= @last_offer.crates %> </p>
-        <p> <strong> Tip: </strong> €<%= @last_offer.tip %> </p>
-        <p> <strong> Comment: </strong> <%= @last_offer.comment %> </p>
-      </div>
-        <button type="button" class="btn btn-success"><%= link_to "Delete this offer", offer_path(@last_offer), method: :delete %></button>
-        <button type="button" class="btn btn-success"><%= link_to "Back to all offers", offers_path %></button>
-</div>
+      <%= render "offers/show" %>
     <% end %>
 <% end %>
