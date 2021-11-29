@@ -22,7 +22,6 @@
 <ul>
   <% @offers.each do |offer| %>
     <div class="card">
-
         <li>
           <p> <strong> Donor name: </strong> <%= offer.user.first_name %> </p>
           <p> <strong> Pickup address: </strong> <%= offer.user.address %> </p>
@@ -37,5 +36,4 @@
         </li>
     </div>
   <% end %>
-
 </ul>
