@@ -5,7 +5,7 @@
   cursor: pointer;
   transition: 0.4s;
   padding: 15px;
-  background-color: white;
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .title {
@@ -13,10 +13,12 @@
 }
 
 .background-color {
-  background-color: rgba(147, 69, 208, 0.3);
+  background: linear-gradient(45deg, #df2a4e, #3F5EFB);
 }
 
-
+.background-color-light {
+  background: linear-gradient(91deg, rgba(223, 42, 78, 0.5), rgba(63, 94, 251, 0.5));
+}
 
 
 // }
@@ -89,4 +91,3 @@
   margin-bottom: 1rem;
   margin-left: 40px;
 }
-
