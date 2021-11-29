@@ -1,7 +1,7 @@
 class OffersController < ApplicationController
   def index
-    @offers = Offer.all
-    # @offers = Offer.where(bookings = [])
+    #@offers = Offer.all
+    @offers = Offer.where(bookings = [])
     @users = User.where.not(latitude: nil, longitude: nil)
     @markers = @users.geocoded.map do |user|
       {
