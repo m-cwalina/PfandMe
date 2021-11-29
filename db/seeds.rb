@@ -17,7 +17,9 @@ user1 = User.new(
   email: "user1@pfandme.com",
   password: "123456",
   phone_number: "030 36 05762",
-  donor: true
+  donor: true,
+  story: "Hi there! I'm Matthias 😊
+  After a period of homelessness, I'm trying to rebuild my life while volunteering at a homeless shelter. Thanks for your tips and donations. It helps me and the shelter 😌"
 )
  user1.photo.attach(io: File.open('./app/assets/images/user_images/user1.jpeg'), filename: 'user1.jpeg', content_type: 'image/jpeg')
  user1.save!
@@ -44,7 +46,7 @@ user3 = User.new(
   email: "user3@pfandme.com",
   password: "123456",
   phone_number: "030 18 46635",
-  donor: true,
+  donor: true
 )
  user3.photo.attach(io: File.open('./app/assets/images/user_images/user3.jpeg'), filename: 'user3.jpeg', content_type: 'image/jpeg')
  user3.save!
