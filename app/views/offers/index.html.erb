@@ -1,7 +1,8 @@
 <div class="container background-color">
 <div class="title">
-<h3 class="pt-3">Here are all active offers</h3>
-<br>
+<div class="offers-title">
+  <h3>Here are all active offers</h3>
+</div>
 </div>
 <%# search bar %>
 <form action="" class="form-page">
@@ -19,23 +20,16 @@
   data-markers="<%= @markers.to_json %>"
 ></div>
 
-<ul>
-  <% @offers.each do |offer| %>
-    <div class="card">
 
-        <li>
+  <% @offers.each do |offer| %>
+    <div class="card-offers">
           <p> <strong> Donor name: </strong> <%= offer.user.first_name %> </p>
           <p> <strong> Pickup address: </strong> <%= offer.user.address %> </p>
           <p> <strong> Timeslot:  </strong> <%= offer.timeslot %></p>
-          <p> <strong> Plastic bottles qty:  </strong> <%= offer.plastic_bottles %></p>
-          <p> <strong> Glass bottles qty:  </strong> <%= offer.glass_bottles %></p>
-          <p> <strong> Crates qty:  </strong> <%= offer.crates %></p>
-          <p> <strong> Tip:  </strong> <%= offer.tip %></p>
-          <%=
-          link_to "Accept", offer_bookings_path(offer), method: :post, class: "btn btn-primary accept-btn", data: { controller: :sweetalert, action: "sweetalert#fire", sweetalert_pending_value: true} %>
-          <br>
-        </li>
+          <p> <strong> Plastic bottles:  </strong> <%= offer.plastic_bottles %></p>
+          <p> <strong> Glass bottles:  </strong> <%= offer.glass_bottles %></p>
+          <p> <strong> Crates:  </strong> <%= offer.crates %></p>
+          <p> <strong> Tip: </strong>€  <%= offer.tip %></p>
+          <%= link_to "Accept", offer_bookings_path(offer), method: :post, class: "btn accept-btn", data: { controller: :sweetalert, action: "sweetalert#fire", sweetalert_pending_value: true} %>
     </div>
   <% end %>
-
-</ul>

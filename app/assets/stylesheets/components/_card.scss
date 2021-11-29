@@ -1,64 +1,73 @@
-.card {
+.card-offers {
   margin: 30px auto;
   border-radius: 40px;
   box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
   cursor: pointer;
   transition: 0.4s;
   padding: 15px;
+  background-color: white;
 }
 
-.card-product {
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
-  padding: 0;
-  width: 500px;
-  height: 470px;
+.title {
+  text-align: center;
 }
 
-.card-product img {
-  height: 300px;
-  width: 100%;
-  object-fit: cover;
+.background-color {
+  background-color: rgba(147, 69, 208, 0.3);
 }
 
-.card-product h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
 
-.card-product p {
-  font-size: 16px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
 
-.card-product .card-product-infos {
-  padding: 16px;
-}
 
-.img-box-card {
-  width: 100%;
-}
+// }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
+// .card-product {
+//   overflow: hidden;
+//   background: white;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//   display: flex;
+//   justify-content: space-between;
+//   flex-direction: column;
+//   align-items: center;
+//   padding: 0;
+//   width: 500px;
+//   height: 470px;
+// }
 
-.accept-btn {
-  width: 100%;
-  border-radius: 4px;
-  background-color: rgb(103, 40, 103);
-}
+// .card-product img {
+//   height: 300px;
+//   width: 100%;
+//   object-fit: cover;
+// }
+
+// .card-product h2 {
+//   font-size: 16px;
+//   font-weight: bold;
+//   margin: 0;
+// }
+
+// .card-product p {
+//   font-size: 16px;
+//   line-height: 1.4;
+//   opacity: .7;
+//   margin-bottom: 0;
+//   margin-top: 8px;
+// }
+
+// .card-product .card-product-infos {
+//   padding: 16px;
+// }
+
+// .img-box-card {
+//   width: 100%;
+// }
+
+// ul {
+//   list-style-type: none;
+//   margin: 0;
+//   padding: 0;
+// }
+
 
 // .accept-btn:hover {
 //   transform: scale(0.9, 0.9);
@@ -80,3 +89,4 @@ ul {
   margin-bottom: 1rem;
   margin-left: 40px;
 }
+
