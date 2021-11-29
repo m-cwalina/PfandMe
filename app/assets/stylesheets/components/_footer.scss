@@ -5,6 +5,7 @@
   justify-content: center;
   margin: auto;
 	ul {
+    color: black !important;
 		position: relative;
 		width: 350px;
 		height: 50px;
@@ -18,31 +19,24 @@
 			;
 		overflow: hidden;
 		li {
+      display: flex;
+      justify-content: center;
 			list-style: none;
       text-decoration: none;
-			display: grid;
 			place-items: center;
 			font-family: "montserrat";
 			color: black !important;
 			z-index: 10;
 			cursor: pointer;
 		}
-		.focus-el {
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: calc(100% / 3);
-			height: 100%;
-			border-radius: 35px;
-			background: #fff;
-			box-shadow:
-				0 12.5px 10px rgba(0, 0, 0, 0.015),
-				0 100px 80px rgba(0, 0, 0, 0.03)
-				;
-
-			&.el--2 {
-				left: calc(-100% / 3);
-			}
-		}
 	}
+}
+.fa-sign-out-alt:before {
+    color: black;
+}
+.fa-home:before {
+    color: black;
+}
+.fa-history:before {
+    color: black;
 }
