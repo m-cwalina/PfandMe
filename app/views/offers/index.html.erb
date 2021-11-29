@@ -20,11 +20,9 @@
   data-markers="<%= @markers.to_json %>"
 ></div>
 
-<ul>
+
   <% @offers.each do |offer| %>
     <div class="card-offers">
-
-        <li>
           <p> <strong> Donor name: </strong> <%= offer.user.first_name %> </p>
           <p> <strong> Pickup address: </strong> <%= offer.user.address %> </p>
           <p> <strong> Timeslot:  </strong> <%= offer.timeslot %></p>
@@ -32,11 +30,6 @@
           <p> <strong> Glass bottles:  </strong> <%= offer.glass_bottles %></p>
           <p> <strong> Crates:  </strong> <%= offer.crates %></p>
           <p> <strong> Tip: </strong>€  <%= offer.tip %></p>
-          <%=
-          link_to "Accept", offer_bookings_path(offer), method: :post, class: "btn accept-btn", data: { controller: :sweetalert, action: "sweetalert#fire", sweetalert_pending_value: true} %>
-          <br>
-        </li>
+          <%= link_to "Accept", offer_bookings_path(offer), method: :post, class: "btn accept-btn", data: { controller: :sweetalert, action: "sweetalert#fire", sweetalert_pending_value: true} %>
     </div>
   <% end %>
-
-</ul>
