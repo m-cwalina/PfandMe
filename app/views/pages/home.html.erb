@@ -1,4 +1,21 @@
 <div class="body-homepage">
+  <div class="mobile-menu">
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+      <div class="wrapper">
+        <ul class="list-mobile-menu">
+          <li class="mobile-menu-item"><div id="a">About</div></li>
+          <li class="mobile-menu-item"><div id="a">Feedback</div></li>
+          <li class="mobile-menu-item"><div id="a"><%= link_to "Logout", destroy_user_session_path, method: :delete %></div></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="title">
+        </div>
+        <p>
+        </p>
+      </div>
+  </div>
   <h1>PfandMe</h1>
   <% if current_user && current_user.donor %>
     <h5>Get those pesky bottles out of your flat or office!</h5>
