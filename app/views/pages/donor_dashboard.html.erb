@@ -1,13 +1,22 @@
-<% if @last_offer.present? %>
-  <%= @last_offer.timeslot %>
-    <% if @last_offer.bookings.any? %>
-      <% @last_offer.bookings.each do |booking| %>
-        <% if booking.status == "accepted" %>
-          <%= booking.user.story %>
-          <%= booking.user.first_name %>
-        <% end %>
-      <% end %>
-    <% else %>
-      <%= render "offers/show" %>
-    <% end %>
-<% end %>
+<div id="body-form">
+  <div class="container">
+    <ul>
+      <% if @last_offer.present? %>
+        <% if @last_offer.bookings.any? %>
+          <% @last_offer.bookings.each do |booking| %>
+            <% if booking.status == "accepted" %>
+            <div class="card">
+              <li>
+                <%= booking.user.story %>
+                <%= booking.user.first_name %>
+              <% end %>
+            <% end %>
+          <% else %>
+            <%= render "offers/show" %>
+          <% end %>
+          <% end %>
+        </li>
+      </div>
+    </ul>
+  </div>
+</div>
