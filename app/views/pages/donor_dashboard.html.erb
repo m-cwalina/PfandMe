@@ -1,13 +1,32 @@
-<% if @last_offer.present? %>
-  <%= @last_offer.timeslot %>
-    <% if @last_offer.bookings.any? %>
-      <% @last_offer.bookings.each do |booking| %>
-        <% if booking.status == "accepted" %>
-          <%= booking.user.story %>
-          <%= booking.user.first_name %>
-        <% end %>
-      <% end %>
-    <% else %>
-      <%= render "offers/show" %>
-    <% end %>
-<% end %>
+
+<div id="body-form">
+<h1>Your Pfander</h1>
+  <div class="container">
+    <ul>
+      <% if @last_offer.present? %>
+        <% if @last_offer.bookings.any? %>
+          <% @last_offer.bookings.each do |booking| %>
+            <% if booking.status == "accepted" %>
+            <div class="card">
+              <li>
+                <% if @last_offer.user.photo.attached? %>
+                  <%= cl_image_tag @last_offer.user.photo.key, class:"avatar-large", height: 80, width: 80, crop: :fill %>
+                <% else %>
+                  <p>No image found</p>
+                <% end %>
+                <p><strong><%= booking.user.first_name %> <%= booking.user.last_name %></strong></p>
+                <p><%= booking.user.story %></p>
+                <p><strong>Pickup Time:</strong> <%= booking.offer.timeslot %></p>
+
+              <% end %>
+            <% end %>
+          <% else %>
+            <%= render "offers/show" %>
+          <% end %>
+          <% end %>
+        </li>
+      </div>
+    </ul>
+  </div>
+</div>
+<%= render 'shared/footer' %>
