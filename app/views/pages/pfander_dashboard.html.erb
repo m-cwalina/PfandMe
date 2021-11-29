@@ -1,17 +1,21 @@
-<div>
+<div id="body-form">
   <h1>Your Bookings</h1>
-  <% if current_user.bookings.any? %>
-  <%# <% raise %>
-    <% current_user.bookings.each do |booking| %>
-      <% if booking.status == "accepted" %>
-        <p>Booking status<%= booking.status %></p>
-        <p><%= booking.offer.user.first_name %></p>
-        <p><%= booking.offer.user.last_name %></p>
-        <p><%= booking.offer.user.address %></p>
-        <p><%= booking.offer.timeslot %></p>
-        <%=
-          link_to "Complete", booking_path(booking), method: :patch, class: "btn btn-primary", data: { controller: :sweetalert, action: "sweetalert#fire2", sweetalert_pending_value: true} %>
-      <% end %>
-    <% end %>
-  <% end %>
+    <div class="container">
+        <% if current_user.bookings.any? %>
+          <% current_user.bookings.each do |booking| %>
+            <% if booking.status == "accepted" %>
+              <div class="card-offers">
+                  <p class="card-text"><strong>Confirmation status:</strong> <%= booking.status %></p>
+                  <p class="card-text"><strong>Pickup From:</strong> <%= booking.offer.user.first_name %> <%= booking.offer.user.last_name %></p>
+                  <p class="card-text"><strong>Location:</strong> <%= booking.offer.user.address %></p>
+                  <p class="card-text"><strong>Time:</strong> <%= booking.offer.timeslot %></p>
+                  <div class="flex-dark">
+                  <%= link_to "Complete", booking_path(booking), method: :patch, class: "bttn-dark", data: { controller: :sweetalert, action: "sweetalert#fire2", sweetalert_pending_value: true} %>
+                  </div>
+              </div>
+            <% end %>
+          <% end %>
+        <% end %>
+    </div>
+  <%= render 'shared/footer' %>
 </div>

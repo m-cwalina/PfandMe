@@ -1,9 +1,10 @@
 <div id="app">
-	<ul>
-		<li>Dashboard</li>
-		<li>History</li>
-		<li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-		<div class="focus-el el--1"></div>
-		<div class="focus-el el--2"></div>
+	<ul class="list-footer">
+		<li class="home"><i class="fas fa-home"></i></li>
+		<li class="history"><i class="fas fa-history"></i></li>
+		<li class="logout"><%= link_to destroy_user_session_path, method: :delete do %>
+      <i class="fas fa-sign-out-alt"></i>
+    </li>
+    <% end %>
 	</ul>
 </div>

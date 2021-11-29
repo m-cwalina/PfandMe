@@ -1,19 +1,34 @@
 <div class="body-homepage">
+  <div class="mobile-menu">
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+      <div class="wrapper">
+        <ul class="list-mobile-menu">
+          <li class="mobile-menu-item"><div id="a">About</div></li>
+          <li class="mobile-menu-item"><div id="a">Feedback</div></li>
+          <li class="mobile-menu-item"><div id="a"><%= link_to "Logout", destroy_user_session_path, method: :delete %></div></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="title">
+        </div>
+        <p>
+        </p>
+      </div>
+  </div>
   <h1>PfandMe</h1>
   <% if current_user && current_user.donor %>
     <h5>Get those pesky bottles out of your flat or office!</h5>
     <div class="flex-dark">
-    <%= link_to new_offer_path do %>
-      <div class="bttn-dark" >Create Offer</div>
+      <%= link_to new_offer_path do %>
+        <div class="btn btn-purple">Create Offer</div>
       <% end %>
-  
-  </div>
+    </div>
   <% else %>
-    <form action="" class="form-page">
-      <input type="search" id="searchfield" placeholder='Enter address' required>
+    <div class="flex-dark">
       <%= link_to offers_path do %>
-        <i class="fa fa-search"></i>
+        <div class="btn btn-purple">Look for offers</div>
       <% end %>
-    </form>
+    </div>
   <% end %>
 </div>
