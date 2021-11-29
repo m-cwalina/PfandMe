@@ -1,7 +1,6 @@
 <div>
   <h1>Your Bookings</h1>
   <% if current_user.bookings.any? %>
-  <%# <% raise %>
     <% current_user.bookings.each do |booking| %>
       <% if booking.status == "accepted" %>
         <p>Booking status: <%= booking.status %></p>

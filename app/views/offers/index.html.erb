@@ -32,7 +32,7 @@
           <p> <strong> Crates qty:  </strong> <%= offer.crates %></p>
           <p> <strong> Tip:  </strong> <%= offer.tip %></p>
           <%=
-          link_to "Accept", offer_bookings_path(offer), method: :post, class: "btn btn-primary accept-btn", data: { controller: :sweetalert, action: "sweetalert#fire", sweetalert_pending_value: true} %>
+          link_to "Accept", offer_bookings_path(offer), method: :post, class: "btn accept-btn", data: { controller: :sweetalert, action: "sweetalert#fire", sweetalert_pending_value: true} %>
           <br>
         </li>
     </div>
