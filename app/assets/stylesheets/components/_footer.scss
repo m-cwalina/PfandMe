@@ -4,7 +4,7 @@
 	display: flex;
   justify-content: center;
   margin: auto;
-	ul {
+	.list-footer {
     color: black !important;
 		position: relative;
 		width: 350px;
@@ -18,7 +18,7 @@
 			0 100px 80px rgba(0, 0, 0, 0.03)
 			;
 		overflow: hidden;
-		li {
+		.home, .history, .logout {
       display: flex;
       justify-content: center;
 			list-style: none;
