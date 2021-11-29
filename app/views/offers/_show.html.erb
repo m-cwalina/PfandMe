@@ -1,6 +1,5 @@
 <div class="container">
-  <ul>
-    <div class="card">
+    <div class="card-offers">
       <% if @last_offer.user == current_user %>
         <h3>This is <strong>your</strong> offer listing! Here are the details:</h3>
       <% else %>
@@ -11,7 +10,6 @@
         <div>
 
         <div>
-          <li>
             <p> <strong> Pickup address: </strong> <%= @last_offer.user.address %> </p>
             <p> <strong> Phone number: </strong> <%= @last_offer.user.phone_number %> </p>
             <p> <strong> Pickup time:  </strong><%= @last_offer.timeslot %></p>
@@ -22,11 +20,9 @@
               <p> <strong> Bottle crates: </strong> <%= @last_offer.crates %> </p>
               <p> <strong> Tip: </strong> €<%= @last_offer.tip %> </p>
               <p> <strong> Comment: </strong> <%= @last_offer.comment %> </p>
-            </li>
         </div>
 
         <button type="button" class="btn btn-success"><%= link_to "Delete this offer", offer_path(@last_offer), method: :delete %></button>
         <button type="button" class="btn btn-success"><%= link_to "Back to all offers", offers_path %></button>
       </div>
-    </ul>
 </div>
