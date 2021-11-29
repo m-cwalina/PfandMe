@@ -1,12 +1,10 @@
 <div id="body-form">
   <h1>Your Bookings</h1>
     <div class="container">
-      <ul>
         <% if current_user.bookings.any? %>
           <% current_user.bookings.each do |booking| %>
             <% if booking.status == "accepted" %>
-              <div class="card">
-                <li>
+              <div class="card-offers">
                   <p class="card-text"><strong>Confirmation status:</strong> <%= booking.status %></p>
                   <p class="card-text"><strong>Pickup From:</strong> <%= booking.offer.user.first_name %> <%= booking.offer.user.last_name %></p>
                   <p class="card-text"><strong>Location:</strong> <%= booking.offer.user.address %></p>
@@ -14,12 +12,10 @@
                   <div class="flex-dark">
                   <%= link_to "Complete", booking_path(booking), method: :patch, class: "bttn-dark", data: { controller: :sweetalert, action: "sweetalert#fire2", sweetalert_pending_value: true} %>
                   </div>
-                </li>
               </div>
             <% end %>
           <% end %>
         <% end %>
-      </ul>
     </div>
+  <%= render 'shared/footer' %>
 </div>
-<%= render 'shared/footer' %>
