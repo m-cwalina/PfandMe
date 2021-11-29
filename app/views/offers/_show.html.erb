@@ -1,12 +1,10 @@
 <div class="container">
     <div class="card-offers">
       <% if @last_offer.user == current_user %>
-        <h3>This is <strong>your</strong> offer listing! Here are the details:</h3>
+        <h3><strong>Your order is still pending</strong></h3>
       <% else %>
           <h3>This is <strong><%= @last_offer.user.first_name %></strong>'s offer listing! Here are the details: </h3>
       <% end %>
-      <br>
-      <%# <p> <strong> You can see the offer details below: </strong> </p> %>
         <div>
 
         <div>
@@ -21,8 +19,12 @@
               <p> <strong> Tip: </strong> €<%= @last_offer.tip %> </p>
               <p> <strong> Comment: </strong> <%= @last_offer.comment %> </p>
         </div>
-
-        <button type="button" class="btn btn-success"><%= link_to "Delete this offer", offer_path(@last_offer), method: :delete %></button>
-        <button type="button" class="btn btn-success"><%= link_to "Back to all offers", offers_path %></button>
+        <div class = "flex-dark">
+          <button type="button" class="btn accept-btn"><%= link_to "Delete", offer_path(@last_offer), method: :delete %></button>
+        </div>
+        <br>
+        <div class = "flex-dark">
+          <button type="button" class="btn accept-btn"><%= link_to "Back", offers_path %></button>
+        </div>
       </div>
 </div>

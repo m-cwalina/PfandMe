@@ -1,10 +1,10 @@
 
-<div id="body-form">
+<div class = "container background-color-light">
 <h1>Your Pfander</h1>
   <div class="container">
     <% booking = @last_offer.booking %>
       <% if @last_offer.booking.present? %>
-          <% if @last_offer.booking.status == "accepted" %>
+        <% if @last_offer.booking.status == "accepted" %>
           <div class="card-offers">
             <% if @last_offer.user.photo.attached? %>
               <%= cl_image_tag @last_offer.user.photo.key, class:"avatar-large", height: 80, width: 80, crop: :fill %>
@@ -20,6 +20,6 @@
           <%= render 'shared/footer' %>
         <% end %>
     </div>
+      <%= render 'shared/footer' %>
   </div>
-  <%= render 'shared/footer' %>
 </div>
