@@ -38,7 +38,7 @@ class OffersController < ApplicationController
   def update
     @offer = Offer.find(params[:id])
     @offer.update(offer_params)
-    redirect_to offer_path(@offer), notice: 'Offer was successfully updated.'
+    redirect_to donor_dashboard_path, notice: 'Offer was successfully updated.'
   end
 
   def destroy

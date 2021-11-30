@@ -1,26 +1,23 @@
 
-<div class = "container background-color-light">
-
-  <div class="container">
+<div class = "container background-color-light-box">
     <% booking = @last_offer.booking %>
       <% if @last_offer.booking.present? %>
         <% if @last_offer.booking.status == "accepted" %>
         <h1>Your Pfander</h1>
           <div class="card-offers">
-            <% if @last_offer.user.photo.attached? %>
-              <%= cl_image_tag @last_offer.user.photo.key, class:"avatar-large", height: 80, width: 80, crop: :fill %>
+            <% if booking.user.photo.attached? %>
+              <%= cl_image_tag booking.user.photo.key, class:"avatar-large", height: 80, width: 80, crop: :fill %>
             <% else %>
               <p>No image found</p>
             <% end %>
-              <p><strong><%= booking.user.first_name %> <%= booking.user.last_name %></strong></p>
+              <p id="name-title"><strong><%= booking.user.first_name %> <%= booking.user.last_name %></strong></p>
               <p><%= booking.user.story %></p>
               <p><strong>Pickup Time:</strong> <%= booking.offer.timeslot %></p>
             <% end %>
-        <% else %>
-          <%= render "offers/show" %>
-          <%= render 'shared/footer' %>
-        <% end %>
-    </div>
+          <% else %>
+            <%= render "offers/show" %>
+            <%= render 'shared/footer' %>
+          <% end %>
+        </div>
       <%= render 'shared/footer' %>
-  </div>
 </div>

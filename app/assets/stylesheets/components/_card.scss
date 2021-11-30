@@ -18,7 +18,12 @@
 
 .background-color-light {
   background: linear-gradient(91deg, rgba(223, 42, 78, 0.5), rgba(63, 94, 251, 0.5));
-  background-size: 100%;
+}
+
+
+.background-color-light-box {
+  background: linear-gradient(91deg, rgba(223, 42, 78, 0.5), rgba(63, 94, 251, 0.5));
+  height: 100vh;
 }
 
 
@@ -112,4 +117,8 @@
   width: 40px;
   position: relative;
   left: -7px;
+
+#name-title {
+  font-size: 30px;
+
 }
