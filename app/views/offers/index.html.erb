@@ -25,14 +25,14 @@
   <% offers.each do |offer| %>
     <% if offer.booking == nil %>
       <div class="card-offers">
-            <p><i class="fas fa-user-circle"></i>   <%= offer.user.first_name %></p>
-            <p><i class="fas fa-map-marked-alt"></i>   <%= offer.user.address %> </p>
-            <p> <i class="fas fa-clock"></i>  <%= offer.timeslot %></p>
-            <p> <strong> Plastic <i class="fas fa-wine-bottle"></i>    </strong> <%= offer.plastic_bottles %></p>
-            <p> <strong> Glass <i class="fas fa-wine-bottle"></i>    </strong> <%= offer.glass_bottles %></p>
-            <p> <i class="fas fa-box"></i>   <%= offer.crates %></p>
-            <p> <i class="fas fa-hand-holding-usd"> </i>: <i class="fas fa-euro-sign"></i><%= offer.tip %></p>
-            <p> <i class="fas fa-comment"></i>  <%= offer.comment %></p>
+            <p><i class="fas fa-user-circle"></i>  &nbsp;  <%= offer.user.first_name %></p>
+            <p><i class="fas fa-map-marked-alt"></i>  &nbsp;  <%= offer.user.address %> </p>
+            <p> <i class="fas fa-clock"></i>  &nbsp; <%= offer.timeslot %></p>
+            <p> <strong> Plastic <i class="fas fa-wine-bottle"></i>  &nbsp;   </strong> <%= offer.plastic_bottles %></p>
+            <p> <strong> Glass <i class="fas fa-wine-bottle"></i>   &nbsp;  </strong> <%= offer.glass_bottles %></p>
+            <p> <i class="fas fa-box"></i>  &nbsp;  <%= offer.crates %></p>
+            <p> <i class="fas fa-hand-holding-usd"> </i>  &nbsp; <i class="fas fa-euro-sign"></i><%= offer.tip %></p>
+            <p> <i class="fas fa-comment"></i>  &nbsp; <%= offer.comment %></p>
             <%= link_to "Accept", offer_bookings_path(offer), method: :post, class: "btn accept-btn", data: { controller: :sweetalert, action: "sweetalert#fire", sweetalert_pending_value: true} %>
       </div>
     <% end %>
