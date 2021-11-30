@@ -6,10 +6,8 @@
 </div>
 <%# search bar %>
 <form action="" class="form-page">
-      <input type="search" id="searchfield" placeholder='Enter address' required data-behavior="autocomplete">
-      <%= link_to offers_path do %>
-        <i class="fa fa-search"></i>
-      <% end %>
+    <input type="search" id="searchfield" placeholder='Enter address' required data-behavior="autocomplete">
+    <input type="button" class="fa fa-search" action="submit" />
 </form>
 
 <%# geocoding - adding array of markers %>
@@ -20,6 +18,7 @@
   border-radius: 15px;"
   data-markers="<%= @markers.to_json %>"
 ></div>
+
 
   <% offers = @offers.sort_by {|offer| offer.created_at} %>
   <% offers.each do |offer| %>

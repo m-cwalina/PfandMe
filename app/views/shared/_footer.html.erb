@@ -11,7 +11,10 @@
         <% end %>
     <% end %>
     </li>
-		<li class="history"><i class="fas fa-history"></i></li>
+		<li class="history"><%= link_to history_path do %>
+    <i class="fas fa-history"></i>
+    <% end %>
+    </li>
 		<li class="logout"><%= link_to destroy_user_session_path, method: :delete do %>
       <i class="fas fa-sign-out-alt"></i>
     </li>
