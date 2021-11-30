@@ -1,4 +1,4 @@
-<div class="body-homepage">
+<div class="container background-color-light-box">
   <div class="mobile-menu">
     <input type="checkbox" id="active">
     <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
@@ -16,9 +16,10 @@
         </p>
       </div>
   </div>
+
   <h1>PfandMe</h1>
   <% if current_user && current_user.donor %>
-    <h5>Get those pesky bottles out of your flat or office!</h5>
+  <h5>Get those pesky bottles out of your flat or office!</h5>
     <div class="flex-dark">
       <%= link_to new_offer_path do %>
         <div class="btn btn-purple">Create Offer</div>
