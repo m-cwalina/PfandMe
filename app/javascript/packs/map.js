@@ -381,8 +381,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (place.geometry) {
         map.map.setCenter(new google.maps.LatLng(place.geometry.location.lat(), place.geometry.location.lng()));
-
-        // TODO: Filter Pins to those in this area only!
+        console.log(place);
+        switch (place.address_components[0].types[0]) {
+          case "locality":
+            map.setZoom(12);
+            break;
+          case "sublocality":
+            map.setZoom(14);
+            break;
+          case "sublocality_level_2":
+            map.setZoom(15);
+            break;
+          case "route":
+            map.setZoom(16);
+            break;
+          default:
+            break;
+        }
         return;
       }
     });
