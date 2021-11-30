@@ -9,4 +9,9 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def history
+    @user = current_user
+    @last_offer = @user.offers.last
+  end
 end
