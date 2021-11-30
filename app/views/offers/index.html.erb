@@ -25,14 +25,85 @@
   <% offers.each do |offer| %>
     <% if offer.booking == nil %>
       <div class="card-offers">
-            <p><i class="fas fa-user-circle"></i>  &nbsp;  <%= offer.user.first_name %></p>
-            <p><i class="fas fa-map-marked-alt"></i>  &nbsp;  <%= offer.user.address %> </p>
-            <p> <i class="fas fa-clock"></i>  &nbsp; <%= offer.timeslot %></p>
-            <p> <strong> Plastic <i class="fas fa-wine-bottle"></i>  &nbsp;   </strong> <%= offer.plastic_bottles %></p>
-            <p> <strong> Glass <i class="fas fa-wine-bottle"></i>   &nbsp;  </strong> <%= offer.glass_bottles %></p>
-            <p> <i class="fas fa-box"></i>  &nbsp;  <%= offer.crates %></p>
-            <p> <i class="fas fa-hand-holding-usd"> </i>  &nbsp; <i class="fas fa-euro-sign"></i><%= offer.tip %></p>
-            <p> <i class="fas fa-comment"></i>  &nbsp; <%= offer.comment %></p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Person</title><path d="M344 144c-3.92 52.87-44 96-88 96s-84.15-43.12-88-96c-4-55 35-96 88-96s92 42 88 96z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M256 304c-87 0-175.3 48-191.64 138.6C62.39 453.52 68.57 464 80 464h352c11.44 0 17.62-10.48 15.65-21.4C431.3 352 343 304 256 304z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg>   <%= offer.user.first_name %></p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Location</title><path d="M256 48c-79.5 0-144 61.39-144 137 0 87 96 224.87 131.25 272.49a15.77 15.77 0 0025.5 0C304 409.89 400 272.07 400 185c0-75.61-64.5-137-144-137z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><circle cx="256" cy="192" r="48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>  <%= offer.user.address %> </p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Time</title><path d="M256 64C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 128v144h96"/></svg>  <%= offer.timeslot %></p>
+            <p><svg id="plastic-bottle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke="black" stroke-width="10" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 371.667 371.667" style="enable-background:new 0 0 371.667 371.667;" xml:space="preserve"><path d="M245.833,371.667h-120c-9.374,0-17-7.626-17-17v-273c0-8.136,5.715-15.024,13.538-16.641l34.373-19.872  c-0.264-0.609-0.41-1.281-0.41-1.987V5c0-2.761,2.238-5,5-5h51c2.762,0,5,2.239,5,5v38.167c0,0.671-0.132,1.312-0.372,1.896  l32.391,19.975c7.793,1.638,13.48,8.515,13.48,16.628v273C262.833,364.041,255.208,371.667,245.833,371.667z M118.833,302.667v52  c0,3.86,3.141,7,7,7h120c3.859,0,7-3.14,7-7v-52H118.833z M118.833,292.667h134v-13h-134V292.667z M118.833,269.667h134v-13h-134  V269.667z M118.833,246.667h134v-13h-134V246.667z M118.833,223.667h134v-13h-134V223.667z M118.833,200.667h134v-13h-134V200.667z   M118.833,177.667h134v-13h-134V177.667z M118.833,154.667h134v-72h-134V154.667z M129.134,72.667h113.538l-39.729-24.5h-31.43  L129.134,72.667z M204.361,38.167h2.974V10h-41v28.167H204.361z"/>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg> <%= offer.plastic_bottles %></p>
+            <p> <svg id="glass-bottle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  stroke="black" stroke-width="10" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 511 511" style="enable-background:new 0 0 511 511;" xml:space="preserve">
+<g>
+	<path d="M332.835,208.286l-15.364-24.583c-4.396-7.034-7.232-15.106-8.201-23.343L295.222,40.949   C299.994,36.645,303,30.417,303,23.5C303,10.542,292.458,0,279.5,0h-48C218.542,0,208,10.542,208,23.5   c0,6.917,3.006,13.145,7.778,17.449L201.729,160.36c-0.969,8.237-3.805,16.309-8.201,23.343l-15.364,24.583   C166.281,227.299,160,249.2,160,271.621V471.5c0,21.78,17.72,39.5,39.5,39.5h112c21.78,0,39.5-17.72,39.5-39.5V271.621   C351,249.2,344.719,227.299,332.835,208.286z M231.5,15h48c4.687,0,8.5,3.813,8.5,8.5s-3.813,8.5-8.5,8.5h-48   c-4.687,0-8.5-3.813-8.5-8.5S226.813,15,231.5,15z M175,367h56.5c4.142,0,7.5-3.358,7.5-7.5s-3.358-7.5-7.5-7.5H175v-17h16.5   c4.142,0,7.5-3.358,7.5-7.5s-3.358-7.5-7.5-7.5H175v-33h80.5c4.687,0,8.5,3.813,8.5,8.5v128c0,4.687-3.813,8.5-8.5,8.5H175V367z    M336,471.5c0,13.51-10.991,24.5-24.5,24.5h-112c-13.509,0-24.5-10.99-24.5-24.5V447h80.5c12.958,0,23.5-10.542,23.5-23.5v-128   c0-12.958-10.542-23.5-23.5-23.5H175v-0.379c0-19.607,5.493-38.759,15.884-55.385l15.364-24.583   c5.563-8.901,9.152-19.117,10.379-29.541L230.169,47h1.331h48h1.331l13.542,115.113c1.227,10.424,4.815,20.639,10.379,29.541   l15.364,24.583C330.507,232.862,336,252.014,336,271.621V471.5z"/>
+	<path d="M231.5,384h-16c-4.142,0-7.5,3.358-7.5,7.5s3.358,7.5,7.5,7.5h16c4.142,0,7.5-3.358,7.5-7.5S235.642,384,231.5,384z"/>
+	<path d="M281.263,181.205c-1.826-5.59-3.095-11.345-3.773-17.105c-0.484-4.113-4.208-7.048-8.325-6.572   c-4.114,0.484-7.056,4.211-6.572,8.325c0.793,6.745,2.278,13.477,4.412,20.01c1.034,3.164,3.971,5.173,7.128,5.173   c0.772,0,1.557-0.12,2.33-0.373C280.399,189.377,282.549,185.143,281.263,181.205z"/>
+	<path d="M239.5,464h-40c-4.142,0-7.5,3.358-7.5,7.5s3.358,7.5,7.5,7.5h40c4.142,0,7.5-3.358,7.5-7.5S243.642,464,239.5,464z"/>
+	<path d="M287.5,464h-16.005c-4.142,0-7.5,3.358-7.5,7.5s3.358,7.5,7.5,7.5H287.5c4.142,0,7.5-3.358,7.5-7.5S291.642,464,287.5,464z   "/>
+	<path d="M293.86,206.303c-2.195-3.512-6.822-4.581-10.335-2.385c-3.512,2.195-4.58,6.822-2.385,10.335l11.839,18.943   c7.209,11.535,11.02,24.822,11.02,38.425v7.882c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-7.882   c0-16.417-4.599-32.453-13.3-46.375L293.86,206.303z"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg> <%= offer.glass_bottles %></p>
+            <p> <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Albums</title><rect x="64" y="176" width="384" height="256" rx="28.87" ry="28.87" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M144 80h224M112 128h288"/></svg>  <%= offer.crates %></p>
+            <p> <i class="fas fa-euro-sign"> &nbsp; </i><%= offer.tip %></p>
+            <p> <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chatbox Ellipses</title><path d="M408 64H104a56.16 56.16 0 00-56 56v192a56.16 56.16 0 0056 56h40v80l93.72-78.14a8 8 0 015.13-1.86H408a56.16 56.16 0 0056-56V120a56.16 56.16 0 00-56-56z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><circle cx="160" cy="216" r="32"/><circle cx="256" cy="216" r="32"/><circle cx="352" cy="216" r="32"/></svg> <%= offer.comment %></p>
+
             <%= link_to "Accept", offer_bookings_path(offer), method: :post, class: "btn accept-btn", data: { controller: :sweetalert, action: "sweetalert#fire", sweetalert_pending_value: true} %>
       </div>
     <% end %>

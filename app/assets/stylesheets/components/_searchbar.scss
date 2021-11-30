@@ -20,7 +20,7 @@ h1,h5 {
     left: 50%;
     transform: translate(-50%,-50%);
     transition: all 1s;
-    width: 50px;
+    width: 300px;
     height: 50px;
     background: white;
     box-sizing: border-box;
@@ -61,7 +61,6 @@ h1,h5 {
 
 .form-page:hover,
 .form-page:valid{
-    width: 200px;
     cursor: pointer;
 }
 
