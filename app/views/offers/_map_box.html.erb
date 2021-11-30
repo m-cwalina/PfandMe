@@ -1,2 +1,9 @@
-<h6><%= user.first_name %></h6>
-<p><%= user.address %></p>
+<p><strong> Donor name: </strong><%= user.first_name %> </p>
+<p><strong> Pickup address: </strong><%= user.address %> </p>
+<p><strong> Timeslot: <%= user.offers.last.timeslot %></p>
+<p><strong> Plastic bottles qty: </strong><%= user.offers.last.plastic_bottles %></p>
+<p><strong> Glass bottles qty: </strong><%= user.offers.last.glass_bottles %></p>
+<p><strong> Crates qty:  </strong><%= user.offers.last.crates %></p>
+<p><strong> Tip:  </strong><%= user.offers.last.tip %></p>
+<%=
+link_to "Accept", offer_bookings_path(user.offers.last), method: :post, class: "btn btn-primary accept-btn", data: { controller: :sweetalert, action: "sweetalert#fire", sweetalert_pending_value: true} %>
