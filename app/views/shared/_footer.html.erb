@@ -1,6 +1,16 @@
 <div id="app" class="fixed-bottom">
 	<ul class="list-footer">
-		<li class="home"><i class="fas fa-home"></i></li>
+		<li class="home">
+    <% if current_user.donor %>
+        <%= link_to donor_dashboard_path do %>
+        <i class="fas fa-home"></i>
+        <% end %>
+    <% else %>
+        <%= link_to pfander_dashboard_path do %>
+        <i class="fas fa-home"></i>
+        <% end %>
+    <% end %>
+    </li>
 		<li class="history"><i class="fas fa-history"></i></li>
 		<li class="logout"><%= link_to destroy_user_session_path, method: :delete do %>
       <i class="fas fa-sign-out-alt"></i>
