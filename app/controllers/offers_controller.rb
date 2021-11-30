@@ -1,6 +1,5 @@
 class OffersController < ApplicationController
   def index
-    # offers where completed == false
     @offers = Offer.all
     # @offers = Offer.where(bookings = [])
     @users = User.where.not(latitude: nil, longitude: nil)
