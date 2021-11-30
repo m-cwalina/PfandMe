@@ -1,3 +1,7 @@
+<% content_for :meta_title, "#{@offer.glass_bottles} + #{@offer.plastic_bottles} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @offer.comment %>
+<% content_for :meta_image, cl_image_path(@offer.user.photo) %>
+
 <div class="container">
 <h1>Your Dashboard</h1>
     <div class="card-offers mt-0">
