@@ -18,7 +18,12 @@
 
 .background-color-light {
   background: linear-gradient(91deg, rgba(223, 42, 78, 0.5), rgba(63, 94, 251, 0.5));
-  background-size: 100%;
+}
+
+
+.background-color-light-box {
+  background: linear-gradient(91deg, rgba(223, 42, 78, 0.5), rgba(63, 94, 251, 0.5));
+  height: 100vh;
 }
 
 
@@ -91,4 +96,30 @@
   margin-top: 0;
   margin-bottom: 1rem;
   margin-left: 40px;
+}
+
+.card-offers svg{
+  width: 30px;
+}
+
+.card-offers .fa-euro-sign {
+  font-size: 22px;
+}
+
+#plastic-bottle {
+  width: 40px;
+  stroke-width: 3px;
+  position: relative;
+  left: -7px;
+}
+
+#glass-bottle {
+  width: 40px;
+  position: relative;
+  left: -7px;
+}
+
+
+#name-title {
+  font-size: 30px;
 }
