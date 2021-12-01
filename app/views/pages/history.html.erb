@@ -1,0 +1,32 @@
+<div class="background-color-light-box">
+  <h1>Your History</h1>
+    <% if current_user.donor %>
+      <% if current_user.bookings.any? %>
+        <% current_user.bookings.each do |booking| %>
+          <% if booking.status == "completed" %>
+            <div class="card-offers">
+              <p class="card-text"><strong>Confirmation status:</strong> <%= booking.status %></p>
+              <p class="card-text"><strong>Pickup From:</strong> <%= booking.offer.user.first_name %> <%= booking.offer.user.last_name %></p>
+              <p class="card-text"><strong>Location:</strong> <%= booking.offer.user.address %></p>
+              <p class="card-text"><strong>Time:</strong> <%= booking.offer.timeslot %></p>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% else %>
+      <% if current_user.bookings.any? %>
+        <% current_user.bookings.each do |booking| %>
+          <% if booking.status == "completed" %>
+            <div class="card-offers">
+              <p class="card-text"><strong>Confirmation status:</strong> <%= booking.status %></p>
+              <p class="card-text"><strong>Pickedup From:</strong> <%= booking.offer.user.first_name %> <%= booking.offer.user.last_name %></p>
+              <p class="card-text"><strong>Plastic Bottles:</strong> <%= booking.offer.plastic_bottles %></p>
+              <p class="card-text"><strong>Glass Bottles:</strong> <%= booking.offer.glass_bottles %></p>
+              <p class="card-text"><strong>Time:</strong> <%= booking.offer.timeslot %></p>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <%= render 'shared/footer' %>
+</div>

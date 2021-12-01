@@ -1,5 +1,10 @@
+<% content_for :meta_title, "#{@last_offer.glass_bottles} + #{@last_offer.plastic_bottles} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @last_offer.comment %>
+<% content_for :meta_image, cl_image_path(@last_offer.user.photo) %>
+
 <div class="container">
-    <div class="card-offers">
+<h1>Your Dashboard</h1>
+    <div class="card-offers mt-0">
       <% if @last_offer.user == current_user %>
         <h3><strong>Your order is still pending</strong></h3>
       <% else %>
