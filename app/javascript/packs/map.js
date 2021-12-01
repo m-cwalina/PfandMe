@@ -1,6 +1,8 @@
 import GMaps from 'gmaps/gmaps.js';
+const image = "assets/bottle.png";
 
 const mapElement = document.getElementById('map');
+console.log(mapElement)
 var map;
 
 if (mapElement) { // don't try to build a map if there's no div#map to inject in
@@ -8,7 +10,7 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
 
   const markers = JSON.parse(mapElement.dataset.markers).map( m =>
     {
-    m["icon"] = "assets/map_icons/bottle.png";
+    m["icon"] = image;
       return m;
     }
     );
@@ -368,6 +370,7 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
   });
   map.setStyle('map_style');
 }
+
 
 document.addEventListener("DOMContentLoaded", function () {
   var userAddress = document.getElementById('searchfield');
