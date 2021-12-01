@@ -1,43 +1,39 @@
 <div class="background-color-light-box">
-  <div class="drop-shadow">
-    <div class="glass">
-        <div class="top">
-
-        <div class="header" style="z-index: -1;"><h1>PfandMe</h1></div>
-        <div class="mobile-menu">
-          <input type="checkbox" id="active">
-          <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
-            <div class="wrapper">
-              <ul class="list-mobile-menu">
-                <li class="mobile-menu-item"><div id="a">About</div></li>
-                <li class="mobile-menu-item"><div id="a">Feedback</div></li>
-                <li class="mobile-menu-item"><div id="a"><%= link_to "Logout", destroy_user_session_path, method: :delete %></div></li>
-              </ul>
-            </div>
-            <div class="content">
-              <div class="title">
-              </div>
-              <p>
-              </p>
-            </div>
+  <div class="mobile-menu">
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+      <div class="wrapper">
+        <ul class="list-mobile-menu">
+          <li class="mobile-menu-item"><div id="a">About</div></li>
+          <li class="mobile-menu-item"><div id="a">Feedback</div></li>
+          <li class="mobile-menu-item"><div id="a"><%= link_to "Logout", destroy_user_session_path, method: :delete %></div></li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="title">
         </div>
+        <p>
+        </p>
+      </div>
+  </div>
 
-      </div>
-      <div class="spacer">&nbsp;</div>
-      <% if current_user && current_user.donor %>
-      <h5>Get those pesky bottles out of your flat or office!</h5>
-      <div class="flex-dark">
-        <%= link_to new_offer_path do %>
-          <div class="btn btn-purple">Create Offer</div>
-        <% end %>
-      </div>
-      <% else %>
-      <div class="flex-dark">
-        <%= link_to offers_path do %>
-          <div class="btn btn-purple">Look for offers</div>
-        <% end %>
-      </div>
+  <div class="container" style="margin-top: 50%;">
+    <div class="top">
+      <div class="header"><h1>PfandMe</h1></div>
+    </div>
+    <% if current_user && current_user.donor %>
+    <h5 style="text-align: center; margin: 10px 0 20px 0px">Get those pesky bottles out of your flat or office!</h5>
+    <div class="flex-dark">
+      <%= link_to new_offer_path do %>
+        <div class="btn btn-purple">Create Offer</div>
       <% end %>
     </div>
+    <% else %>
+    <div class="flex-dark">
+      <%= link_to offers_path do %>
+        <div class="btn btn-purple">Look for offers</div>
+      <% end %>
+    </div>
+    <% end %>
   </div>
 </div>

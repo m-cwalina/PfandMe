@@ -1,6 +1,6 @@
 .header h1 {
   /* margin: 20px; */
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Ranchers', cursive;
   color: #202020;
   text-transform: uppercase;
   letter-spacing: -2px;
@@ -8,18 +8,5 @@
   line-height: 80px;
   color: #f1ebe5;
   text-shadow: 0 13.36px 8.896px #b370a2,0 -2px 1px #fff;
-  letter-spacing: -4px;
-}
-
-$blur: 20px;
-$shadow-opacity: 0.30;
-
-
-.drop-shadow {
-  height: 89%;
-  width: 100%;
-  filter:  drop-shadow(0px 20px 10px rgba(0, 0, 0, $shadow-opacity));
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  letter-spacing: 2px;
 }
