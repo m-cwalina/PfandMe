@@ -13,3 +13,10 @@
 @import "components/index";
 @import "pages/index";
 @import "components/content";
+
+body {
+  background: linear-gradient(0deg, rgba(147, 69, 208, 0.4), rgba(147, 69, 208, 0.4)),url("https://images.unsplash.com/photo-1436076863939-06870fe779c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80");
+  background-position-x: 48%;
+  background-size: 330%;
+  background-attachment: fixed;
+}
