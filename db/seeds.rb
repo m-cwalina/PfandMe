@@ -5,6 +5,10 @@
 # Offer.destroy_all
 
 puts "Cleaning the database..."
+Booking.destroy_all
+
+Offer.destroy_all
+
 User.destroy_all
 
 puts 'Creating 8 users...'
