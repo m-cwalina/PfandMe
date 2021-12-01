@@ -13,8 +13,9 @@ Rails.application.routes.draw do
 
   resources :bookings, only: [:index, :show, :edit, :update]
 
-  # error pages
-  %w[404 422 500 503].each do |code|
-    get code, :to => "errors#show", :code => code
+  if Rails.env.production?
+    get '404', to: 'application#page_not_found'
+    get '422', to: 'application#server_error'
+    get '500', to: 'application#server_error'
   end
 end
