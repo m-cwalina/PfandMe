@@ -1,5 +1,5 @@
 import GMaps from 'gmaps/gmaps.js';
-const image = "assets/bottle.png";
+const image = "https://res.cloudinary.com/yasminek/image/upload/v1638377013/bottle_qy2dlw.png";
 
 const mapElement = document.getElementById('map');
 console.log(mapElement)
@@ -10,7 +10,7 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
 
   const markers = JSON.parse(mapElement.dataset.markers).map( m =>
     {
-    m["icon"] = image;
+    m["icon"] = "https://res.cloudinary.com/yasminek/image/upload/v1638377013/bottle_qy2dlw.png";
       return m;
     }
     );
