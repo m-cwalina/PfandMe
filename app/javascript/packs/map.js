@@ -14,7 +14,6 @@ if (mapElement) { // don't try to build a map if there's no div#map to inject in
     );
 
   map.addMarkers(markers);
-  // console.log(markers);
   if (markers.length === 0) {
     map.setZoom(2);
   } else if (markers.length === 1) {
@@ -384,7 +383,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(place);
         switch (place.address_components[0].types[0]) {
           case "locality":
-            map.setZoom(12);
+            map.setZoom(11);
             break;
           case "sublocality":
             map.setZoom(14);
@@ -392,9 +391,20 @@ document.addEventListener("DOMContentLoaded", function () {
           case "sublocality_level_2":
             map.setZoom(15);
             break;
+          case "administrative_area_level_4":
+            map.setZoom(15);
+            break;
           case "route":
             map.setZoom(16);
             break;
+          case "street_number":
+            map.setZoom(16);
+            break;
+          case "premise":
+            map.setZoom(16);
+            break;
+          case "neighborhood":
+            map.setZoom(14);
           default:
             break;
         }
