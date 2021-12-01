@@ -83,7 +83,7 @@ a:hover {
   text-align: center;
   padding: 8px 80px;
   color: white;
-  width: 100%;
+  width: 95%;
 }
 
 .accept-btn {
@@ -120,4 +120,8 @@ background-color: $dark-purple;
   padding: 8px 85px;
   color: white;
   width: 100%;
+}
+
+.spacer {
+  height: 50vh;
 }
