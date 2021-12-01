@@ -1,5 +1,5 @@
 <div class="background-color-light-box">
-  <h1>Your Bookings</h1>
+  <h1 class="offers-title">Your Bookings</h1>
     <% if current_user.bookings.any? %>
       <% current_user.bookings.each do |booking| %>
         <% if booking.status == "accepted" %>

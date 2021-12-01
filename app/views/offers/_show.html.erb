@@ -3,7 +3,7 @@
 <% content_for :meta_image, cl_image_path(Offer.last.user.photo.key) %>
 
 <div class="container">
-<h1>Your Dashboard</h1>
+<h1 class="offers-title">Your Dashboard</h1>
     <div class="card-offers mt-0">
       <% if Offer.last.user == current_user %>
         <h4>Thanks, <%=Offer.last.user.first_name %>! </h4>
