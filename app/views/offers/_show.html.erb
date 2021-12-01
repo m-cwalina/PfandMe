@@ -6,7 +6,8 @@
 <h1>Your Dashboard</h1>
     <div class="card-offers mt-0">
       <% if Offer.last.user == current_user %>
-        <h3>Your offer is pending</h3>
+        <h4>Thanks, <%=Offer.last.user.first_name %>! </h4>
+        <h4>Your offer is pending</h4>
         <br>
       <% else %>
           <h3>This is <strong><%= Offer.last.user.first_name %></strong>'s offer listing! Here are the details: </h3>
@@ -14,11 +15,11 @@
         <div>
 
         <div>
-             <p><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Location</title><path d="M256 48c-79.5 0-144 61.39-144 137 0 87 96 224.87 131.25 272.49a15.77 15.77 0 0025.5 0C304 409.89 400 272.07 400 185c0-75.61-64.5-137-144-137z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><circle cx="256" cy="192" r="48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg><%= Offer.last.user.address %> </p>
+             <p><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Location</title><path d="M256 48c-79.5 0-144 61.39-144 137 0 87 96 224.87 131.25 272.49a15.77 15.77 0 0025.5 0C304 409.89 400 272.07 400 185c0-75.61-64.5-137-144-137z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><circle cx="256" cy="192" r="48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg> &nbsp; <%= Offer.last.user.address %> </p>
 
-            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Call</title><path d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg> <%= Offer.last.user.phone_number %> </p>
+            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Call</title><path d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg>  &nbsp; <%= Offer.last.user.phone_number %> </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Time</title><path d="M256 64C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 128v144h96"/></svg> <%= Offer.last.timeslot %></p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Time</title><path d="M256 64C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 128v144h96"/></svg> &nbsp;  <%= Offer.last.timeslot %></p>
 
           </div>
               <p><svg id="plastic-bottle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke="black" stroke-width="10" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 371.667 371.667" style="enable-background:new 0 0 371.667 371.667;" xml:space="preserve"><path d="M245.833,371.667h-120c-9.374,0-17-7.626-17-17v-273c0-8.136,5.715-15.024,13.538-16.641l34.373-19.872  c-0.264-0.609-0.41-1.281-0.41-1.987V5c0-2.761,2.238-5,5-5h51c2.762,0,5,2.239,5,5v38.167c0,0.671-0.132,1.312-0.372,1.896  l32.391,19.975c7.793,1.638,13.48,8.515,13.48,16.628v273C262.833,364.041,255.208,371.667,245.833,371.667z M118.833,302.667v52  c0,3.86,3.141,7,7,7h120c3.859,0,7-3.14,7-7v-52H118.833z M118.833,292.667h134v-13h-134V292.667z M118.833,269.667h134v-13h-134  V269.667z M118.833,246.667h134v-13h-134V246.667z M118.833,223.667h134v-13h-134V223.667z M118.833,200.667h134v-13h-134V200.667z   M118.833,177.667h134v-13h-134V177.667z M118.833,154.667h134v-72h-134V154.667z M129.134,72.667h113.538l-39.729-24.5h-31.43  L129.134,72.667z M204.361,38.167h2.974V10h-41v28.167H204.361z"/>
@@ -52,7 +53,7 @@
 </g>
 <g>
 </g>
-</svg><%= Offer.last.plastic_bottles %> </p>
+</svg> <%= Offer.last.plastic_bottles %> </p>
 
               <p> <svg id="glass-bottle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  stroke="black" stroke-width="10" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 511 511" style="enable-background:new 0 0 511 511;" xml:space="preserve">
 <g>
@@ -95,11 +96,11 @@
 </g>
 </svg> <%= Offer.last.glass_bottles %> </p>
 
-              <p> <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Albums</title><rect x="64" y="176" width="384" height="256" rx="28.87" ry="28.87" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M144 80h224M112 128h288"/></svg>   <%= Offer.last.crates %> </p>
+              <p> <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Albums</title><rect x="64" y="176" width="384" height="256" rx="28.87" ry="28.87" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M144 80h224M112 128h288"/></svg>   &nbsp;  <%= Offer.last.crates %> </p>
 
-             <p> <i class="fas fa-euro-sign"> &nbsp; </i> <%= Offer.last.tip %> </p>
+             <p> <i class="fas fa-euro-sign"> &nbsp;&nbsp; &nbsp; </i> <%= Offer.last.tip %> </p>
 
-             <p> <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chatbox Ellipses</title><path d="M408 64H104a56.16 56.16 0 00-56 56v192a56.16 56.16 0 0056 56h40v80l93.72-78.14a8 8 0 015.13-1.86H408a56.16 56.16 0 0056-56V120a56.16 56.16 0 00-56-56z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><circle cx="160" cy="216" r="32"/><circle cx="256" cy="216" r="32"/><circle cx="352" cy="216" r="32"/></svg>  <%= Offer.last.comment %> </p>
+             <p> <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chatbox Ellipses</title><path d="M408 64H104a56.16 56.16 0 00-56 56v192a56.16 56.16 0 0056 56h40v80l93.72-78.14a8 8 0 015.13-1.86H408a56.16 56.16 0 0056-56V120a56.16 56.16 0 00-56-56z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><circle cx="160" cy="216" r="32"/><circle cx="256" cy="216" r="32"/><circle cx="352" cy="216" r="32"/></svg>  &nbsp;  <%= Offer.last.comment %> </p>
 
         </div>
         <div class = "flex-dark">
