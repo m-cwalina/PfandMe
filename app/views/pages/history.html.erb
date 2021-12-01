@@ -1,18 +1,15 @@
-<div id="background-color-light-box-history">
+<div class="background-color-light-box">
   <h1>Your History</h1>
     <% if current_user.donor %>
-      <% if current_user.bookings.any? %>
-        <% current_user.bookings.each do |booking| %>
-          <% if booking.status == "completed" %>
+      <% if current_user.offers.last.booking %>
+          <% current_user.offers.each do |offer| %>
             <div class="card-offers">
-              <p class="card-text"><strong>Confirmation status:</strong> <%= booking.status %></p>
-              <p class="card-text"><strong>Pickup From:</strong> <%= booking.offer.user.first_name %> <%= booking.offer.user.last_name %></p>
-              <p class="card-text"><strong>Location:</strong> <%= booking.offer.user.address %></p>
-              <p class="card-text"><strong>Time:</strong> <%= booking.offer.timeslot %></p>
+              <p class="card-text"><strong>Pickup From:</strong> <%= offer.user.first_name %> <%= offer.user.last_name %></p>
+              <p class="card-text"><strong>Location:</strong> <%= offer.user.address %></p>
+              <p class="card-text"><strong>Time:</strong> <%= offer.timeslot %></p>
             </div>
           <% end %>
         <% end %>
-      <% end %>
     <% else %>
       <% if current_user.bookings.any? %>
         <% current_user.bookings.each do |booking| %>
