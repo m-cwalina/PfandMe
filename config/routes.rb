@@ -12,4 +12,9 @@ Rails.application.routes.draw do
   #patch '/bookings/:id', to: 'bookings#complete', as: :booking_complete
 
   resources :bookings, only: [:index, :show, :edit, :update]
+
+  # error pages
+  %w[404 422 500 503].each do |code|
+    get code, :to => "errors#show", :code => code
+  end
 end

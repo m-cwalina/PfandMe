@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>We're sorry, but something went wrong (500)</title>
+  <title>Whoops! Something seems to have gone wrong ☠️ </title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
   .rails-default-error-page {
@@ -35,6 +35,14 @@
     font-size: 100%;
     color: #730E15;
     line-height: 1.5em;
+    margin: 0;
+  }
+
+
+  .error500 {
+    min-height: 120vh;
+    background-size: cover;
+    background-position: center;
   }
 
   .rails-default-error-page div.dialog > p {
@@ -55,12 +63,12 @@
 </head>
 
 <body class="rails-default-error-page">
+  <div class="error500" style="background-image: url('/images/500.jpeg');">
   <!-- This file lives in public/500.html -->
-  <div class="dialog">
     <div>
-      <h1>We're sorry, but something went wrong.</h1>
+      <h1>Whoops, something went wrong!</h1>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
+    <p>Try to refresh this page, or feel free to contact us if the problem persists.</p>
   </div>
 </body>
 </html>
