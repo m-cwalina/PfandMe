@@ -8,6 +8,12 @@
   background: rgba(255, 255, 255, 0.6);
 }
 
+.card-offers.history {
+  width: 80%;
+  margin: 20px auto 0 auto;
+}
+
+
 .card-offers-box {
   padding-bottom: 30px;
 }
@@ -27,7 +33,7 @@
 
 .background-color-light-box {
   background: linear-gradient(91deg, rgba(223, 42, 78, 0.5), rgba(63, 94, 251, 0.5));
-  height: 100vh;
+  min-height: 100vh;
 }
 
 #background-color-light-box-history {
