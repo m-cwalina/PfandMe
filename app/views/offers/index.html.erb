@@ -19,16 +19,18 @@
   data-markers="<%= @markers.to_json %>"
 ></div>
 
+<div class="card-offers-box">
 
   <% offers = @offers.sort_by {|offer| offer.created_at} %>
   <% offers.each do |offer| %>
     <% if offer.booking == nil %>
+
       <div class="card-offers">
-            <p><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Person</title><path d="M344 144c-3.92 52.87-44 96-88 96s-84.15-43.12-88-96c-4-55 35-96 88-96s92 42 88 96z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M256 304c-87 0-175.3 48-191.64 138.6C62.39 453.52 68.57 464 80 464h352c11.44 0 17.62-10.48 15.65-21.4C431.3 352 343 304 256 304z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg>   <%= offer.user.first_name %></p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Person</title><path d="M344 144c-3.92 52.87-44 96-88 96s-84.15-43.12-88-96c-4-55 35-96 88-96s92 42 88 96z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M256 304c-87 0-175.3 48-191.64 138.6C62.39 453.52 68.57 464 80 464h352c11.44 0 17.62-10.48 15.65-21.4C431.3 352 343 304 256 304z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg>  &nbsp; <%= offer.user.first_name %></p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Location</title><path d="M256 48c-79.5 0-144 61.39-144 137 0 87 96 224.87 131.25 272.49a15.77 15.77 0 0025.5 0C304 409.89 400 272.07 400 185c0-75.61-64.5-137-144-137z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><circle cx="256" cy="192" r="48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>  <%= offer.user.address %> </p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Location</title><path d="M256 48c-79.5 0-144 61.39-144 137 0 87 96 224.87 131.25 272.49a15.77 15.77 0 0025.5 0C304 409.89 400 272.07 400 185c0-75.61-64.5-137-144-137z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><circle cx="256" cy="192" r="48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg> &nbsp; <%= offer.user.address %> </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Time</title><path d="M256 64C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 128v144h96"/></svg>  <%= offer.timeslot %></p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Time</title><path d="M256 64C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 128v144h96"/></svg> &nbsp; <%= offer.timeslot %></p>
 
             <p><svg id="plastic-bottle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke="black" stroke-width="10" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 371.667 371.667" style="enable-background:new 0 0 371.667 371.667;" xml:space="preserve"><path d="M245.833,371.667h-120c-9.374,0-17-7.626-17-17v-273c0-8.136,5.715-15.024,13.538-16.641l34.373-19.872  c-0.264-0.609-0.41-1.281-0.41-1.987V5c0-2.761,2.238-5,5-5h51c2.762,0,5,2.239,5,5v38.167c0,0.671-0.132,1.312-0.372,1.896  l32.391,19.975c7.793,1.638,13.48,8.515,13.48,16.628v273C262.833,364.041,255.208,371.667,245.833,371.667z M118.833,302.667v52  c0,3.86,3.141,7,7,7h120c3.859,0,7-3.14,7-7v-52H118.833z M118.833,292.667h134v-13h-134V292.667z M118.833,269.667h134v-13h-134  V269.667z M118.833,246.667h134v-13h-134V246.667z M118.833,223.667h134v-13h-134V223.667z M118.833,200.667h134v-13h-134V200.667z   M118.833,177.667h134v-13h-134V177.667z M118.833,154.667h134v-72h-134V154.667z M129.134,72.667h113.538l-39.729-24.5h-31.43  L129.134,72.667z M204.361,38.167h2.974V10h-41v28.167H204.361z"/>
 <g>
@@ -104,13 +106,14 @@
 </g>
 </svg> <%= offer.glass_bottles %></p>
 
-            <p> <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Albums</title><rect x="64" y="176" width="384" height="256" rx="28.87" ry="28.87" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M144 80h224M112 128h288"/></svg>  <%= offer.crates %></p>
+            <p> <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Albums</title><rect x="64" y="176" width="384" height="256" rx="28.87" ry="28.87" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M144 80h224M112 128h288"/></svg> &nbsp; <%= offer.crates %></p>
 
-            <p> <i class="fas fa-euro-sign"> &nbsp; </i><%= offer.tip %></p>
-            
-            <p> <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chatbox Ellipses</title><path d="M408 64H104a56.16 56.16 0 00-56 56v192a56.16 56.16 0 0056 56h40v80l93.72-78.14a8 8 0 015.13-1.86H408a56.16 56.16 0 0056-56V120a56.16 56.16 0 00-56-56z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><circle cx="160" cy="216" r="32"/><circle cx="256" cy="216" r="32"/><circle cx="352" cy="216" r="32"/></svg> <%= offer.comment %></p>
+            <p> <i class="fas fa-euro-sign"> &nbsp;&nbsp;&nbsp;&nbsp; </i><%= offer.tip %></p>
+
+            <p> <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Chatbox Ellipses</title><path d="M408 64H104a56.16 56.16 0 00-56 56v192a56.16 56.16 0 0056 56h40v80l93.72-78.14a8 8 0 015.13-1.86H408a56.16 56.16 0 0056-56V120a56.16 56.16 0 00-56-56z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><circle cx="160" cy="216" r="32"/><circle cx="256" cy="216" r="32"/><circle cx="352" cy="216" r="32"/></svg>&nbsp; <%= offer.comment %></p>
 
             <%= link_to "Accept", offer_bookings_path(offer), method: :post, class: "btn accept-btn", data: { controller: :sweetalert, action: "sweetalert#fire", sweetalert_pending_value: true} %>
       </div>
     <% end %>
   <% end %>
+</div>

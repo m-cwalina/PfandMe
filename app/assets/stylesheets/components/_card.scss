@@ -1,11 +1,21 @@
 .card-offers {
-  margin : 30px;
+  margin-top : 30px;
   border-radius: 40px;
   box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
   cursor: pointer;
   transition: 0.4s;
   padding: 15px;
   background: rgba(255, 255, 255, 0.6);
+}
+
+.card-offers.history {
+  width: 80%;
+  margin: 20px auto 0 auto;
+}
+
+
+.card-offers-box {
+  padding-bottom: 30px;
 }
 
 .title {
@@ -22,11 +32,7 @@
 // }
 
 
-// .background-color-light-box {
-//   // background: linear-gradient(91deg, rgba(223, 42, 78, 0.5), rgba(63, 94, 251, 0.5));
-//   background: linear-gradient(45deg, #102eff, #d2379b);
-//   height: 100vh;
-// }
+
 
 // #background-color-light-box-history {
 //   // background: linear-gradient(91deg, rgba(223, 42, 78, 0.5), rgba(63, 94, 251, 0.5));
@@ -109,8 +115,10 @@
   width: 30px;
 }
 
-.card-offers .fa-euro-sign {
+.fa-euro-sign {
   font-size: 22px;
+  position: relative;
+  left: 7px;
 }
 
 #plastic-bottle {
