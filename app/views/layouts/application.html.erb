@@ -25,7 +25,14 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
+    <script>
+      function reloadIt() {
+        if (window.location.href.substr(-2) !== “?r”) {
+          window.location = window.location.href + “?r”;
+        }
+      }
+      setTimeout(‘reloadIt()’, 1000)();
+    </script>
   </head>
 
   <body>
