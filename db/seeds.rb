@@ -198,3 +198,23 @@ booking2 = Booking.create!(
   offer_id: offer5.id,
   status: :completed
 )
+
+offer8 = Offer.create!(
+  timeslot: '10.00 - 11.00',
+  comment: "It might be a bit heavy. Please bring your own bags or a 🛒. Bis bald!",
+  user_id: user2.id,
+  plastic_bottles: 50,
+  glass_bottles: 20,
+  crates: 0,
+  tip: 10
+)
+
+offer9 = Offer.create!(
+  timeslot: '10.00 - 11.00',
+  comment: "It might be a bit heavy. Please bring your own bags or a 🛒. Bis bald!",
+  user_id: user2.id,
+  plastic_bottles: 50,
+  glass_bottles: 20,
+  crates: 0,
+  tip: 10
+)
