@@ -1,6 +1,6 @@
 <% content_for :meta_title, "#{Offer.last.glass_bottles} + #{Offer.last.plastic_bottles} is on #{DEFAULT_META["meta_product_name"]}" %>
 <% content_for :meta_description, Offer.last.comment %>
-<% content_for :meta_image, cl_image_path(Offer.last.user.photo) %>
+<% content_for :meta_image, cl_image_path(Offer.last.user.photo.key) %>
 
 <div class="container">
 <h1>Your Dashboard</h1>
