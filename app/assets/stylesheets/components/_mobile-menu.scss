@@ -1,5 +1,5 @@
 .wrapper{
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   height: 100vh;
@@ -10,10 +10,6 @@
   z-index: 10;
 }
 
-.mobile-menu {
-  position: sticky;
-  top: 0;
-}
 
 #active:checked ~ .wrapper{
   clip-path: circle(75%);
@@ -117,4 +113,9 @@ input[type="checkbox"]{
   100%{
     filter: hue-rotate(360deg);
   }
+}
+
+.mobile-menu {
+  position: sticky;
+  top: 0;
 }

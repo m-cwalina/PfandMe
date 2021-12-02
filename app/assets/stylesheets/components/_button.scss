@@ -118,9 +118,8 @@ background-color: $dark-purple;
   font-size: 22px;
   line-height: 26px;
   display: flex;
-  align-items: center;
+  justify-content: space-evenly;
   text-align: center;
-  padding: 8px 85px;
   color: white;
   width: 100%;
 }
