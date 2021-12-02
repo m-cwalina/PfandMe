@@ -385,29 +385,30 @@ const image = "https://res.cloudinary.com/yasminek/image/upload/v1638377013/bott
             console.log(place);
             switch (place.address_components[0].types[0]) {
               case "locality":
-                map.setZoom(11);
+                map.setZoom(10);
                 break;
               case "sublocality":
-                map.setZoom(14);
+                map.setZoom(13);
                 break;
               case "sublocality_level_2":
-                map.setZoom(15);
+                map.setZoom(14);
                 break;
               case "administrative_area_level_4":
-                map.setZoom(15);
+                map.setZoom(14);
                 break;
               case "route":
-                map.setZoom(16);
+                map.setZoom(15);
                 break;
               case "street_number":
-                map.setZoom(16);
+                map.setZoom(15);
                 break;
               case "premise":
-                map.setZoom(16);
+                map.setZoom(15);
                 break;
               case "neighborhood":
-                map.setZoom(14);
+                map.setZoom(13);
               default:
+                map.setZoom(14);
                 break;
             }
             return;

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home', as: :home
+  get "/about", to: "pages#about", as: "about"
   resources :offers do
     resources :bookings, only: [:new, :create, :edit, :update, :delete]
   end
