@@ -22,16 +22,16 @@
       <div class="header"><h1>PfandMe</h1></div>
     </div>
     <% if current_user && current_user.donor %>
-    <h5 style="text-align: center; margin: 10px 0 20px 0px">Get those pesky bottles out of your flat or office!</h5>
+    <h5 style="text-align: center; margin: 10px 0 20px 0px; padding: 0px 40px;">Get those pesky bottles out of your flat or office!</h5>
     <div class="flex-dark">
       <%= link_to new_offer_path do %>
-        <div class="btn btn-purple">Create Offer</div>
+        <div class="bttn-dark" id="btn-change">Create Offer</div>
       <% end %>
     </div>
     <% else %>
     <div class="flex-dark">
       <%= link_to offers_path do %>
-        <div class="btn btn-purple">Look for offers</div>
+        <div class="bttn-dark" id="btn-change">Look for offers</div>
       <% end %>
     </div>
     <% end %>
