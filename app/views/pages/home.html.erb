@@ -22,11 +22,7 @@
       <div class="header"><h1>PfandMe</h1></div>
     </div>
     <% if current_user && current_user.donor %>
-<<<<<<< HEAD
-    <h5 style="text-align: center; margin: 10px 0 20px 0px" id="Typing">Get those pesky bottles out of your flat or office!</h5>
-=======
-    <h5 style="text-align: center; margin: 10px 0 20px 0px; padding: 0px 40px;">Get those pesky bottles out of your flat or office!</h5>
->>>>>>> master
+    <h5 style="text-align: center; margin: 10px 0 20px 0px; padding: 0px 40px;" data-controller="typewriter" id='typing'></h5>
     <div class="flex-dark">
       <%= link_to new_offer_path do %>
         <div class="bttn-dark" id="btn-change">Create Offer</div>

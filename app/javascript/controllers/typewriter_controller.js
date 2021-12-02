@@ -1,13 +1,20 @@
 import { Controller } from "stimulus"
 
-var i = 0;
-var txt = 'Get those pesky bottles out of your flat or office!'; /* The text */
-var speed = 100; /* The speed/duration of the effect in milliseconds */
+export default class extends Controller {
 
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("Typing").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
+  typeWriter() {
+    if (this.i < this.txt.length) {
+      this.element.innerHTML += this.txt.charAt(this.i);
+      this.i++;
+      setTimeout(this.typeWriter.bind(this), this.speed);
+    }
+  }
+
+  connect() {
+    console.log("Hello")
+    this.i = 0;
+    this.txt = 'Get those pesky bottles out of your flat or office!'; /* The text */
+    this.speed = 50; /* The speed/duration of the effect in milliseconds */
+    this.typeWriter()
   }
 }
