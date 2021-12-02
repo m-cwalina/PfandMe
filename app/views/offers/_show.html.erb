@@ -4,7 +4,7 @@
 
 <div class="container">
 <h3 class="offers-title">Your Dashboard</h3>
-    <div class="card-offers mt-0">
+    <div class="card-offers">
       <% if Offer.last.user == current_user %>
         <h4>Thanks, <%=Offer.last.user.first_name %>! </h4>
         <h4>Your offer is pending</h4>
