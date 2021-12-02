@@ -39,10 +39,8 @@ $smallest-breakpoint: 520px;
 }
 
 .title {
-  display: flex;
-  align-items: last baseline;
   margin-bottom: 1em;
-  flex-wrap: wrap;
+  text-align: center;
 
 
   &__text {

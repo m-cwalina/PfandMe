@@ -4,7 +4,7 @@
   box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
   cursor: pointer;
   transition: 0.4s;
-  width: 320px;
+  min-width: 320px;
   padding: 15px;
   background: rgba(255, 255, 255, 0.6);
 }
@@ -96,10 +96,6 @@
 //     -5px -5px 30px 15px rgba(0,0,0,0.22);
 // }
 
-.title {
-  text-align: center;
-  // background-color: rgb(245, 211, 245);
-}
 
 .background-color {
   background-color: rgb(253, 219, 244);
