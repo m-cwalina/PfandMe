@@ -9,6 +9,12 @@
   transition: all 0.3s ease-in-out;
   z-index: 10;
 }
+
+.mobile-menu {
+  position: sticky;
+  top: 0;
+}
+
 #active:checked ~ .wrapper{
   clip-path: circle(75%);
 }
@@ -25,7 +31,6 @@
   font-size: 20px;
   color: #fff;
   cursor: pointer;
-  background: #000;
   transition: all 0.3s ease-in-out;
 }
 #active:checked ~ .menu-btn{
