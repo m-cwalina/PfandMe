@@ -58,7 +58,7 @@
 
         <div class="wrapper">
           <ul class="list-mobile-menu">
-            <li class="mobile-menu-item"><div id="a">About</div></li>
+            <li class="mobile-menu-item"><div id="a"><%= link_to "About", about_path %></div></li>
             <li class="mobile-menu-item"><div id="a">
             <% if current_user.donor == true %>
               <%= link_to "Dashboard", donor_dashboard_path %>
