@@ -8,6 +8,12 @@
   clip-path: circle(25px at calc(100% - 45px) 45px);
   transition: all 0.3s ease-in-out;
 }
+
+.mobile-menu {
+  position: sticky;
+  top: 0;
+}
+
 #active:checked ~ .wrapper{
   clip-path: circle(75%);
 }
