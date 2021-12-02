@@ -27,22 +27,22 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <script>
+    <%# <script>
       function reloadIt() {
         if (window.location.href.substr(-2) !== "?r") {
           window.location = window.location.href + "?r";
         }
       }
       setTimeout('reloadIt()', 1000)();
-    </script>
+    </script> %>
   </head>
 
   <body>
     <%# <%= render 'shared/navbar' %>
     <%#= render 'shared/flashes' %>
     <%= yield %>
-    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}", 'data-turbolinks-eval': 'false' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true, 'data-turbolinks-eval': 'false' %>
     <%= javascript_pack_tag "map" %>
   </body>
 </html>
