@@ -4,7 +4,7 @@
       <% if @last_offer.booking.present? %>
         <% if @last_offer.booking.status == "accepted" %>
         <h1 class="offers-title">Your Pfander</h1>
-          <div class="card-offers">
+          <div class="card-offers show-donor">
             <div class="d-flex justify-content-between align-items-center">
 
               <% if booking.user.photo.attached? %>
