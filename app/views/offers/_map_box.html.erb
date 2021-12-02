@@ -1,11 +1,10 @@
-<p><strong> Donor name: </strong><%= user.first_name %> </p>
-<p><strong> Pickup address: </strong><%= user.address %> </p>
+  <div class="map_card">
 
-<p><strong> Timeslot: <%= user.offers.last.timeslot %></p>
+    <p><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Person</title><path d="M344 144c-3.92 52.87-44 96-88 96s-84.15-43.12-88-96c-4-55 35-96 88-96s92 42 88 96z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path d="M256 304c-87 0-175.3 48-191.64 138.6C62.39 453.52 68.57 464 80 464h352c11.44 0 17.62-10.48 15.65-21.4C431.3 352 343 304 256 304z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/></svg>  &nbsp; <%= user.first_name %></p>
 
-<p><strong> Plastic bottles qty: </strong><%= @offers.last.plastic_bottles %></p>
-<p><strong> Glass bottles qty: </strong><%= @offers.last.glass_bottles %></p>
-<p><strong> Crates qty:  </strong><%= @offers.last.crates %></p>
-<p><strong> Tip:  </strong><%= @offers.last.tip %></p>
-<%=
-link_to "Accept", offer_bookings_path(@offers.last), method: :post, class: "btn btn-primary accept-btn", data: { controller: :sweetalert, action: "sweetalert#fire", sweetalert_pending_value: true} %>
+    <p><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Location</title><path d="M256 48c-79.5 0-144 61.39-144 137 0 87 96 224.87 131.25 272.49a15.77 15.77 0 0025.5 0C304 409.89 400 272.07 400 185c0-75.61-64.5-137-144-137z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><circle cx="256" cy="192" r="48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg> &nbsp; <%= user.address %></p>
+
+    <p><svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Time</title><path d="M256 64C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 128v144h96"/></svg> &nbsp; <%= user.offers.last.timeslot %></p>
+
+    <a href="#<%= user.offers.last.id %>" class="accept-btn view">View</a>
+</div>
