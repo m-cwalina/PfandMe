@@ -1,5 +1,9 @@
-<div class="background-color-light-box">
+<div class="content-container">
+  <div class="background-color-light-box">
   <h2 class="offers-title">Your Bookings</h2>
+
+
+
     <% if current_user.bookings.any? %>
       <% current_user.bookings.each do |booking| %>
         <% if booking.status == "accepted" %>
@@ -19,5 +23,5 @@
         <% end %>
       <% end %>
     <% end %>
+  </div>
   <%= render 'shared/footer' %>
-</div>

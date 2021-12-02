@@ -3,19 +3,32 @@
 
   <div class="container" style="margin-top: 50%;">
     <div class="top">
+    <svg style="margin: auto;" width="70" height="147" viewBox="0 0 70 147" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 56.9883H69.377V138.187C69.377 142.606 65.7953 146.187 61.377 146.187H8.00001C3.58173 146.187 0 142.606 0 138.187V56.9883Z" fill="white"/>
+  <path d="M8.67213 44.5995C2.72553 45.5906 0.412958 53.2716 0 56.9883H69.377C69.377 48.3161 61.5308 45.0125 59.466 44.5995C52.5283 40.6351 53.2716 28.9071 53.2716 23.5386C60.2093 20.5653 52.8587 6.60733 48.3161 0H18.5831C9.66323 15.8576 13.2147 22.2998 16.1054 23.5386C16.1054 30.146 14.6187 43.6084 8.67213 44.5995Z" fill="white"/>
+  <path d="M42.3127 19.6318C42.3127 29.3522 47.7129 53.6532 53.1131 53.6532C57.4333 53.6532 58.5133 60.1335 58.5133 63.3736V128.044M42.3127 19.6318H26.112M42.3127 19.6318C46.6329 19.6318 44.1127 13.1515 42.3127 9.91138L26.112 9.91138C21.7918 17.6877 24.3119 19.6318 26.112 19.6318M26.112 19.6318C26.112 29.3522 23.9519 49.765 15.3115 53.6532C13.5115 53.6532 9.91132 55.5973 9.91132 63.3736C9.91132 70.241 9.91132 105.41 9.91132 128.044M9.91132 128.044C9.91132 131.039 9.91132 133.815 9.91132 136.277H58.5133V132.16V128.044M9.91132 128.044H58.5133" stroke="#6B4FA7" stroke-width="3.5"/>
+  <path d="M9.91101 116.835H58.513" stroke="#6B4FA7" stroke-width="0.5"/>
+  <path d="M20.7117 43.9326C26.112 47.1728 39.0725 51.7089 47.7129 43.9326" stroke="#6B4FA7" stroke-width="3.5"/>
+  <rect x="9.91101" y="63.3733" width="48.602" height="58.3224" fill="#6B4FA7"/>
+  <circle cx="34.2121" cy="92.9397" r="16.2007" fill="#FEFEFE"/>
+  <circle cx="34.2121" cy="92.9397" r="16.2007" fill="#FEFEFE"/>
+  <circle cx="34.2122" cy="92.9396" r="12.1505" fill="#FEFEFE"/>
+  <circle cx="34.2122" cy="92.9396" r="12.1505" fill="#6B4FA7"/>
+  <path d="M34.2122 84.8394L36.0308 90.4366H41.916L37.1548 93.8958L38.9734 99.493L34.2122 96.0337L29.4509 99.493L31.2695 93.8958L26.5083 90.4366H32.3935L34.2122 84.8394Z" fill="#FEFEFE"/>
+  </svg>
       <div class="header"><h1>PfandMe</h1></div>
     </div>
     <% if current_user && current_user.donor %>
-    <h5 style="text-align: center; margin: 10px 0 20px 0px">Get those pesky bottles out of your flat or office!</h5>
+    <h5 style="text-align: center; margin: 10px 0 20px 0px; padding: 0px 40px;" data-controller="typewriter" id='typing'></h5>
     <div class="flex-dark">
       <%= link_to new_offer_path do %>
-        <div class="btn btn-purple">Create Offer</div>
+        <div class="bttn-dark" id="btn-change">Create Offer</div>
       <% end %>
     </div>
     <% else %>
     <div class="flex-dark">
       <%= link_to offers_path do %>
-        <div class="btn btn-purple">Look for offers</div>
+        <div class="bttn-dark" id="btn-change">Look for offers</div>
       <% end %>
     </div>
     <% end %>

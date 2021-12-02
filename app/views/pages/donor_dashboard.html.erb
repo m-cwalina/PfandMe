@@ -1,5 +1,5 @@
 
-<div class = "background-color-light-box">
+  <div class="content-container">
     <% booking = @last_offer.booking %>
       <% if @last_offer.booking.present? %>
         <% if @last_offer.booking.status == "accepted" %>
@@ -19,8 +19,7 @@
             <% end %>
           <% else %>
             <%= render "offers/show" %>
-            <%= render 'shared/footer' %>
           <% end %>
         </div>
+      </div>
       <%= render 'shared/footer' %>
-</div>

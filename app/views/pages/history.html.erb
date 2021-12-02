@@ -1,7 +1,8 @@
-<div class="background-color-light-box">
+<div class="content-container">
 
 <h1 class="offers-title">Past Offers</h1>
   <div class="cards-history">
+
 
     <% if current_user.donor %>
       <% if current_user.offers.last.booking %>
@@ -110,3 +111,4 @@
   </div>
   <%= render 'shared/footer' %>
 </div>
+
