@@ -19,4 +19,12 @@ body {
   background-position-x: 48%;
   background-size: 330%;
   background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-container {
+  flex: 1 1 auto;
+  margin-bottom: 70px;
 }
