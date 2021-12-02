@@ -7,13 +7,14 @@
   background: #000;
   clip-path: circle(25px at calc(100% - 45px) 45px);
   transition: all 0.3s ease-in-out;
+  z-index: 10;
 }
 #active:checked ~ .wrapper{
   clip-path: circle(75%);
 }
 .menu-btn{
   position: absolute;
-  z-index: 2;
+  z-index: 11;
   right: 20px;
   top: 20px;
   height: 50px;
