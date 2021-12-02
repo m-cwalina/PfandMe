@@ -2,7 +2,7 @@ $white: rgba(255,255,255,0.3);
 
 #body-form {
   // background: linear-gradient(45deg, #df2a4e, #3F5EFB);
-  font-family: 'Montserrat', sans-serif;
+  font-family: $body-font;
 }
 
 #new_offer {
@@ -31,7 +31,7 @@ $white: rgba(255,255,255,0.3);
     backdrop-filter: blur(5px);
     box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
     color: #fff;
-    font-family: Montserrat, sans-serif;
+    font-family: $body-font;
     font-weight: 500;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 
