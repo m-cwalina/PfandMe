@@ -2,12 +2,12 @@
 	<ul class="list-footer">
 		<li class="home">
     <% if current_user.donor %>
-        <%= link_to home_path do %>
-        <i class="fas fa-home"></i>
+        <%= link_to new_offer_path do %>
+        <i class="fas fa-plus"></i>
         <% end %>
     <% else %>
-        <%= link_to home_path  do %>
-        <i class="fas fa-home"></i>
+        <%= link_to offers_path  do %>
+        <i class="fas fa-plus"></i>
         <% end %>
     <% end %>
     </li>
