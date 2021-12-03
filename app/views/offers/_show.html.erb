@@ -6,8 +6,8 @@
 <h3 class="offers-title">Your Dashboard</h3>
     <div class="card-offers">
       <% if Offer.last.user == current_user %>
-        <h4>Thanks, <%=Offer.last.user.first_name %>! </h4>
-        <h4>Your offer is pending</h4>
+        <h4 style="color: purple;">Thanks, <%=Offer.last.user.first_name %>! </h4>
+        <h4 style="color: purple;">Your offer is pending</h4>
         <br>
       <% else %>
           <h3>This is <strong><%= Offer.last.user.first_name %></strong>'s offer listing! Here are the details: </h3>
