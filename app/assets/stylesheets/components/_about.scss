@@ -74,6 +74,7 @@ $smallest-breakpoint: 520px;
 .content-preview {
   padding: 0.5em;
   justify-self: start;
+  margin-left: 3px;
 
   @media screen and (min-width: $grid-breakpoint) {
     &--left {
