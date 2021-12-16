@@ -2,6 +2,6 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
 
   def default_url_options
-  { host: ENV["DOMAIN"] || "www.pfandme.net" }
+    { host: ENV["DOMAIN"] || "www.pfandme.net" }
   end
 end
